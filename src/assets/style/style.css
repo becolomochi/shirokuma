@@ -1,0 +1,13 @@
+@charset 'utf-8';
+@import '_reset.css';
+
+/** common *
+body {
+  font-size: 62.5%;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+/** wrapper */
+.wrapper-header {
+  background-color: #f7f7f7;
+}
