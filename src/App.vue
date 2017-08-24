@@ -7,9 +7,9 @@
         <h1>becolomochi's portfolio</h1>
         <nav>
           <ul>
-            <li><a href="/#/">Home</a></li>
-            <li><a href="/#/product">Product</a></li>
-            <li><a href="/#/contact">Contact</a></li>
+            <li><router-link to="/">Home</router-link></li>
+            <li><router-link to="/product">Product</router-link></li>
+            <li><router-link to="/contact">Contact</router-link></li>
           </ul>
         </nav>
       </header>
@@ -18,11 +18,11 @@
     <footer>
       <nav>
         <ul>
-          <li><a href="/#/">Home</a></li>
-          <li><a href="/#/product">Product</a></li>
-          <li><a href="/#/contact">Contact</a></li>
-          <li><a href="/#/sitemap">Sitemap</a></li>
-          <li><a href="/#/privacy">Privacy poricy</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/product">Product</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+          <li><router-link to="/sitemap">Sitemap</router-link></li>
+          <li><router-link to="/privacy">Privacy policy</router-link></li>
         </ul>
       </nav>
       <div class="copyright-box">© 2017 beco</div>
