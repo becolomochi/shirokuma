@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import titleMixin from './util/title'
 import router from './router'
+import './assets/style/style.scss'
 
 Vue.mixin(titleMixin)
 Vue.config.productionTip = false
