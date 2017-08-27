@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
+import Product from '@/components/Product'
 import Contact from '@/components/Contact'
 import PageNotFound from '@/components/PageNotFound'
 
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'Top',
       component: Top
+    },
+    {
+      path: '/product',
+      name: 'Product',
+      component: Product
     },
     {
       path: '/contact',

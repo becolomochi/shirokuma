@@ -5,15 +5,16 @@
     </header>
     <navigation></navigation>
     <main>
-      <h1>ページが見つかりません</h1>
+      <h1>Product</h1>
     </main>
+    <navigation></navigation>
   </div>
 </template>
 
 <script>
   import Navigation from '@/components/parts/Navigation'
   export default {
-    title: 'Not Found',
+    title: 'Product',
     components: {
       navigation: Navigation
     }

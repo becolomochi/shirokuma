@@ -1,43 +1,46 @@
 <template>
-  <div class="contact">
-    <h1>{{ msg }}</h1>
-  <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-horizontal">
-    <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA" /><input name="SHEET_NAME" type="hidden" value="フォームデータ" />
-    <div class="form-group">
-      <label class="col-md-2 control-label">Mail</label>
-      <div class="col-md-10">
-        <input type="email" class="form-control" name="your-email" placeholder="your@email.com">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-md-2 control-label">お名前</label>
-      <div class="col-md-10">
-        <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="col-md-2 control-label">メッセージ</label>
-      <div class="col-md-10">
-        <textarea class="form-control" name="your-message" placeholder="Message" required></textarea>
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-offset-2 col-md-10">
-        <button class="btn btn-primary" type="submit" v-on:click="sendMessage()">送信</button>
-      </div>
-    </div>
-  </form>
+  <div class="wrapper">
+    <header>
+      <h1>becolomochi's portfolio</h1>
+    </header>
+    <navigation></navigation>
+    <main>
+      <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-horizontal">
+        <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA" /><input name="SHEET_NAME" type="hidden" value="フォームデータ" />
+        <div class="form-group">
+          <label class="col-md-2 control-label">Mail</label>
+          <div class="col-md-10">
+            <input type="email" class="form-control" name="your-email" placeholder="your@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">お名前</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">メッセージ</label>
+          <div class="col-md-10">
+            <textarea class="form-control" name="your-message" placeholder="Message" required></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-primary" type="submit" v-on:click="sendMessage()">送信</button>
+          </div>
+        </div>
+      </form>
+    </main>
   </div>
 </template>
 
 <script>
+  import Navigation from '@/components/parts/Navigation'
   export default {
-    name: 'contact',
     title: 'Contact',
-    data() {
-      return {
-        msg: 'Contact'
-      }
+    components: {
+      navigation: Navigation
     },
     methods: {
       sendMessage() {

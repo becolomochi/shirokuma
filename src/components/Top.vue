@@ -91,9 +91,6 @@
 
     </div>
     <navigation></navigation>
-    <footer>
-      <div class="copyright-box">© 2017 beco</div>
-    </footer>
   </div>
 </template>
 

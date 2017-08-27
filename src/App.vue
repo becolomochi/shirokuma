@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <footer>
+      <div class="copyright-box">© 2017 beco</div>
+    </footer>
   </div>
 </template>
 
