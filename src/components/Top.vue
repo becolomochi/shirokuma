@@ -101,6 +101,7 @@
   import Navigation from '@/components/parts/Navigation'
   export default {
     name: 'hello',
+    title: 'Top',
     components: {
       navigation: Navigation
     }
