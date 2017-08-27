@@ -1,32 +1,6 @@
 <template>
   <div id="app">
-    <div class="wrapper-header">
-    </div>
-    <div class="wrapper">
-      <header>
-        <h1>becolomochi's portfolio</h1>
-        <nav>
-          <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/product">Product</router-link></li>
-            <li><router-link to="/contact">Contact</router-link></li>
-          </ul>
-        </nav>
-      </header>
-      <router-view></router-view>
-    </div>
-    <footer>
-      <nav>
-        <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/product">Product</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
-          <li><router-link to="/sitemap">Sitemap</router-link></li>
-          <li><router-link to="/privacy">Privacy policy</router-link></li>
-        </ul>
-      </nav>
-      <div class="copyright-box">© 2017 beco</div>
-    </footer>
+    <router-view></router-view>
   </div>
 </template>
 
