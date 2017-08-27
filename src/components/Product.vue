@@ -6,6 +6,7 @@
     <navigation></navigation>
     <main>
       <h1>Product</h1>
+      <product-list></product-list>
     </main>
     <navigation></navigation>
   </div>
@@ -13,10 +14,12 @@
 
 <script>
   import Navigation from '@/components/parts/Navigation'
+  import Child from '@/components/parts/ProductDatail'
   export default {
     title: 'Product',
     components: {
-      navigation: Navigation
+      navigation: Navigation,
+      productList: Child
     }
   }
 </script>
