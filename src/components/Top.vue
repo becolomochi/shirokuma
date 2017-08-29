@@ -99,6 +99,7 @@
   export default {
     name: 'hello',
     title: 'Top',
+    description: 'べこ（becolomochi）のポートフォリオサイト',
     components: {
       navigation: Navigation
     }

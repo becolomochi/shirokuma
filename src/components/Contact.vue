@@ -39,6 +39,7 @@
   import Navigation from '@/components/parts/Navigation'
   export default {
     title: 'Contact',
+    description: 'べこ（becolomochi）へのお問い合わせページ',
     components: {
       navigation: Navigation
     },
