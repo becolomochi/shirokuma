@@ -90,6 +90,7 @@
       </article>
 
     </div>
+    {{ data }}
     <navigation></navigation>
   </div>
 </template>
@@ -102,12 +103,8 @@
     description: 'べこ（becolomochi）のポートフォリオサイト',
     components: {
       navigation: Navigation
-    }
-    //  data () {
-    //    return {
-    //      msg: 'becolomochi\' s portfolio',
-    //    }
-    //  }
+    },
+    props: ['data']
   }
 
 </script>

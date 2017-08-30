@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view :data="myData"></router-view>
     <footer>
       <div class="copyright-box">© 2017 beco</div>
     </footer>
@@ -8,8 +8,14 @@
 </template>
 
 <script>
+  import myData from '../static/data.json'
   export default {
-    name: 'app'
+    name: 'app',
+    data () {
+      return {
+        myData: myData
+      }
+    }
   }
 </script>
 
