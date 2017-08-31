@@ -32,30 +32,15 @@
 
       <section>
         <div class="post-box-outer">
-          <article class="post-box">
+          <article class="post-box" v-for="d in data">
             <img src="" width="" height="" alt="" class="post-image">
-            <h1 class="post-title">作品名</h1>
-            <p class="post-description">内容内容内容内容内容</p>
+            <h1 class="post-title">{{ d.title }}</h1>
+            <p class="post-description">{{ d.text }}</p>
+            <p class="post-year">制作年：{{ d.year }}</p>
             <div class="post-tags">
-              <a href="#" class="tag">タグ1</a>
-            </div>
-          </article>
-
-          <article class="post-box">
-            <img src="" width="" height="" alt="" class="post-image">
-            <h1 class="post-title">作品名</h1>
-            <p class="post-description">内容内容内容内容内容</p>
-            <div class="post-tags">
-              <a href="#" class="tag">タグ1</a>
-            </div>
-          </article>
-
-          <article class="post-box">
-            <img src="" width="" height="" alt="" class="post-image">
-            <h1 class="post-title">作品名</h1>
-            <p class="post-description">内容内容内容内容内容</p>
-            <div class="post-tags">
-              <a href="#" class="tag">タグ1</a>
+              <ul>
+                <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
+              </ul>
             </div>
           </article>
         </div>
