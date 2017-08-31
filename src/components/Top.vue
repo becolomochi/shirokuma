@@ -33,8 +33,10 @@
       <section>
         <div class="post-box-outer">
           <article class="post-box" v-for="d in data">
-            <img src="" width="" height="" alt="" class="post-image">
-            <h1 class="post-title">{{ d.title }}</h1>
+            <div v-for="p in d.picture" v-if="p.id === '1'">
+              <img :src="p.path" width="" height="" alt="" class="post-image">
+            </div>
+            <h1 class="post-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
             <p class="post-description">{{ d.text }}</p>
             <p class="post-year">制作年：{{ d.year }}</p>
             <div class="post-tags">
