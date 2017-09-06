@@ -11,43 +11,22 @@
 
       <section class="pickup-box-outer">
 
-        <article class="pickup-box">
-          <img src="" width="" height="" alt="" class="pickup-image">
-          <h1 class="pickup-title">作品名</h1>
-          <p class="pickup-description">内容内容内容内容内容</p>
+        <article class="pickup-box" v-for="d in data">
+          <div v-for="p in d.picture" v-if="p.id === '1'">
+            <img :src="p.path" width="" height="" alt="" class="pickup-image">
+          </div>
+          <h1 class="pickup-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+          <p class="pickup-description">{{ d.text }}</p>
+          <p class="pickup-year">制作年：{{ d.year }}</p>
           <div class="pickup-tags">
-            <a href="#" class="tag">タグ1</a>
+            <ul>
+              <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
+            </ul>
           </div>
         </article>
 
-        <article class="post-box">
-          <img src="" width="" height="" alt="" class="post-image">
-          <h1 class="post-title">作品名</h1>
-          <p class="post-description">内容内容内容内容内容</p>
-          <div class="post-tags">
-            <a href="#" class="tag">タグ1</a>
-          </div>
-        </article>
-      </section>
-
-      <section>
-        <div class="post-box-outer">
-          <article class="post-box" v-for="d in data">
-            <div v-for="p in d.picture" v-if="p.id === '1'">
-              <img :src="p.path" width="" height="" alt="" class="post-image">
-            </div>
-            <h1 class="post-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-            <p class="post-description">{{ d.text }}</p>
-            <p class="post-year">制作年：{{ d.year }}</p>
-            <div class="post-tags">
-              <ul>
-                <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
-              </ul>
-            </div>
-          </article>
-        </div>
         <div class="common-more-box">
-          <a class="">もっと見る</a>
+          <router-link to="/product" class="">もっと見る</router-link>
         </div>
       </section>
 
@@ -77,7 +56,6 @@
       </article>
 
     </div>
-    {{ data }}
     <navigation></navigation>
   </div>
 </template>
