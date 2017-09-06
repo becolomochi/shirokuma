@@ -26,7 +26,7 @@ export default new Router({
           component: ProductTop
         },
         {
-          path: 'detail',
+          path: ':slug',
           component: ProductDetail
         }
       ]

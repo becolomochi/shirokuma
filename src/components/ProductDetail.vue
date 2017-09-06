@@ -1,22 +1,39 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <div class="">{{ year }}年</div>
-    <div class="">{{ text }}</div>
-    <div class="">{{ tag }}</div>
+    <article class="product-box">
+      <div v-for="p in filteredData.picture" v-if="p.id === '1'">
+        <img :src="p.path" width="" height="" alt="" class="product-image">
+      </div>
+      {{ filteredData.slug }}
+      <h1 class="product-title">{{ filteredData.title }}</h1>
+      <p class="product-description">{{ filteredData.text }}</p>
+      <p class="product-year">制作年：{{ filteredData.year }}</p>
+      <div class="product-tags">
+        <ul>
+          <li v-for="t in filteredData.tags"><a href="#" class="tag">{{ t }}</a></li>
+        </ul>
+      </div>
+    </article>
   </div>
 </template>
 
 <script>
+  import myData from '../../static/data.json'
   export default {
-    title: 'detail',
+    title: '作品タイトル',
     description: 'べこ（becolomochi）の作品内容',
     data () {
       return {
-        title: 'title',
-        year: '2017',
-        text: '内容内容内容内容内容内容内容内容内容<br>内容内容内容',
-        tag: ['タグ1', 'タグ2']
+        myData: myData
+      }
+    },
+    computed: {
+      filteredData: function () {
+        var url = window.location.protocol+ '//' + window.location.host + '/#/product/'
+        var matchData = this.myData.filter(function(item, index){
+          if (item.slug === window.location.href.replace(url, '')) return true;
+        })
+        return matchData[0]
       }
     }
   }
