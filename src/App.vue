@@ -40,6 +40,24 @@
     right: 0;
     z-index: 9999;
   }
+  .site-title {
+    font-size: 2.0rem;
+    a {
+      color: #000;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+    .header-nav {
+      a {
+        color: #000;
+        &:hover {
+          text-decoration: none;
+          border-bottom-color: #000;
+        }
+      }
+    }
   @media (min-width: 768px) {
     header, .header-nav {
       text-align: left;
@@ -52,15 +70,10 @@
     .site-title {
       float: left;
       width: 50%;
-      margin-top: 10px;
+      margin-top: 15px;
       margin-bottom: 0;
-      margin-left: 10px;
-      a {
-        color: #000;
-        &:hover {
-          text-decoration: none;
-        }
-      }
+      margin-left: 20px;
+      font-size: 2.0rem;
     }
     .header-nav {
       float: right;
@@ -71,12 +84,7 @@
         display: inline-block;
         padding: 16px;
         border-bottom: 3px solid transparent;
-        color: #000;
         transition: border-bottom 0.3s;
-        &:hover {
-          text-decoration: none;
-          border-bottom-color: #000;
-        }
       }
     }
   }

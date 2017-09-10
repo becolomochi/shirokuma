@@ -4,7 +4,6 @@
     </div>
     <div class="top-wrapper">
       <section class="pickup-box-outer">
-        <h2><img src="../assets/title_product.svg" alt="product" class="common-content-title"></h2>
         <div class="pickup-box-inner">
           <article class="pickup-box" v-for="d in data">
             <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
@@ -104,10 +103,15 @@
       padding-right: 10px;
     }
     .pickup-box {
-      width: 100%;
+      max-width: 480px;
+      width: 90%;
       float: none;
+      margin-left: auto;
+      margin-right: auto;
       & + .pickup-box {
-        margin-left: 0;
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
