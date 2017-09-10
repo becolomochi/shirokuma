@@ -1,5 +1,11 @@
 <template>
   <div>
+    <nav>
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/product">Product</router-link></li>
+      </ul>
+    </nav>
     <article class="product-box">
       <div v-for="p in filteredData.picture" v-if="p.id === '1'">
         <img :src="p.path" width="" height="" alt="" class="product-image">

@@ -3,7 +3,13 @@
     <header>
       <h1>becolomochi's portfolio</h1>
     </header>
-    <navigation></navigation>
+    <nav>
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/product">Product</router-link></li>
+        <li><router-link to="/contact">Contact</router-link></li>
+      </ul>
+    </nav>
     <main>
       <router-view></router-view>
     </main>

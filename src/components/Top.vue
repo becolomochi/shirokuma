@@ -6,8 +6,13 @@
       <header>
         <h1>becolomochi's portfolio</h1>
       </header>
-      <navigation></navigation>
-      <img src="/#/assets/logo_shirokuma.svg">
+      <nav>
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/product">Product</router-link></li>
+          <li><router-link to="/contact">Contact</router-link></li>
+        </ul>
+      </nav>
 
       <section class="pickup-box-outer">
 
