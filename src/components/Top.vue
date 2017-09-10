@@ -7,14 +7,14 @@
         <h2><img src="../assets/title_product.svg" alt="product" class="common-content-title"></h2>
         <div class="pickup-box-inner">
           <article class="pickup-box" v-for="d in data">
-            <div class="pickup-image-box" v-for="p in d.picture" v-if="p.id === '1'">
-              <img :src="p.path" width="" height="" alt="" class="pickup-image">
+            <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
+              <img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image">
             </div>
             <h1 class="pickup-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
             <p class="pickup-year">制作年：{{ d.year }}</p>
-            <div class="pickup-tags">
+            <div class="common-tags">
               <ul>
-                <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
+                <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag">{{ t }}</a></li>
               </ul>
             </div>
           </article>
@@ -116,35 +116,13 @@
     margin-left: -16px;
     margin-right: -16px;
     height: 180px;
-    position: relative;
-    overflow: hidden;
   }
-  .pickup-image {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-  }
-
   .pickup-title, .pickup-year, .pickup-tags {
     text-align: center;
   }
   .pickup-title {
     font-size: 2.2rem;
   }
-
-.pickup-tags {
-  li {
-    display: inline-block;
-    font-size: 1.2rem;
-    & +li {
-      margin-left: 6px;
-    }
-  }
-}
 
   .common-more-box {
     text-align: center;
