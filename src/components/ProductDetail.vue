@@ -1,17 +1,16 @@
 <template>
   <div>
-    <nav>
+    <nav class="breadcrumb-nav">
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/product">Product</router-link></li>
       </ul>
     </nav>
     <article class="product-box">
+      <h1 class="product-title">{{ filteredData.title }}</h1>
       <div v-for="p in filteredData.picture" v-if="p.id === '1'">
         <img :src="p.path" width="" height="" alt="" class="product-image">
       </div>
-      {{ filteredData.slug }}
-      <h1 class="product-title">{{ filteredData.title }}</h1>
       <p class="product-description">{{ filteredData.text }}</p>
       <p class="product-year">制作年：{{ filteredData.year }}</p>
       <div class="product-tags">
@@ -44,3 +43,17 @@
     }
   }
 </script>
+
+<style lang="scss">
+  .breadcrumb-nav {
+    text-align: left;
+    li {
+      display: inline-block;
+      & + li {
+        &::before {
+          content: ' / ';
+        }
+      }
+    }
+  }
+</style>

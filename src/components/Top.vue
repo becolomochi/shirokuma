@@ -174,7 +174,7 @@
       display: block;
     }
     &.contact-content-title {
-      background-color: #ffd6ed;
+      background-color: #fff0f1;
     }
   }
 
@@ -187,12 +187,12 @@
   }
 
   .about-content-box {
-    background-color: #ffd6ed;
+    background-color: #fff0f1;
     padding-bottom: 100px;
   }
 
   .contact-content-box {
-    background-color: #eeffbd;
+    background-color: #f3fee7;
     padding-bottom: 100px;
   }
 
