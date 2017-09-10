@@ -6,7 +6,7 @@
       <header>
         <h1>becolomochi's portfolio</h1>
       </header>
-      <nav>
+      <nav class="header-nav">
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/product">Product</router-link></li>
@@ -15,30 +15,31 @@
       </nav>
 
       <section class="pickup-box-outer">
-
-        <article class="pickup-box" v-for="d in data">
-          <div v-for="p in d.picture" v-if="p.id === '1'">
-            <img :src="p.path" width="" height="" alt="" class="pickup-image">
-          </div>
-          <h1 class="pickup-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-          <p class="pickup-description">{{ d.text }}</p>
-          <p class="pickup-year">制作年：{{ d.year }}</p>
-          <div class="pickup-tags">
-            <ul>
-              <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
-            </ul>
-          </div>
-        </article>
-
+        <h2><img src="../assets/title_product.svg" alt="product" class="common-content-title"></h2>
+        <div class="pickup-box-inner">
+          <article class="pickup-box" v-for="d in data">
+            <div class="pickup-image-box" v-for="p in d.picture" v-if="p.id === '1'">
+              <img :src="p.path" width="" height="" alt="" class="pickup-image">
+            </div>
+            <h1 class="pickup-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+            <p class="pickup-year">制作年：{{ d.year }}</p>
+            <div class="pickup-tags">
+              <ul>
+                <li v-for="t in d.tags"><a href="#" class="tag">{{ t }}</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
         <div class="common-more-box">
-          <router-link to="/product" class="">もっと見る</router-link>
+          <router-link to="/product" class="more-link">もっと見る</router-link>
         </div>
       </section>
 
-      <article class="about-box-outer">
+      <article class="common-box-outer">
+        <h2 class="common-content-title"><img src="../assets/title_about.svg" alt="about" class="common-content-title"></h2>
         <div class="about-content-box">
-          <h1 class="about-title">About このサイトについて</h1>
-          <div class="about-text">
+          <h1 class="common-article-title">このサイトについて</h1>
+          <div class="common-text">
             <p>内容内容内容内容内容内容内容</p>
           </div>
         </div>
@@ -47,10 +48,11 @@
         </div>
       </article>
 
-      <article class="about-box-outer">
-        <div class="about-content-box">
-          <h1 class="about-title">Contact お問い合わせ</h1>
-          <div class="about-text">
+      <article class="common-box-outer">
+        <h2 class="common-content-title contact-content-title"><img src="../assets/title_contact.svg" alt="contact" class="common-content-title"></h2>
+        <div class="contact-content-box">
+          <h1 class="common-article-title">お問い合わせ</h1>
+          <div class="common-text">
             <p>Twitter</p>
             <p>フォーム</p>
           </div>
@@ -80,38 +82,139 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
   section + section {
     margin-bottom: 100px;
   }
   .pickup-box-outer {
+    position: relative;
+    margin-top: 50px;
     margin-bottom: 100px;
   }
 
-  .pickup-box-outer::after {
+  .pickup-box-inner::after {
     content: '';
     display: block;
     clear: both;
   }
 
   .pickup-box {
-    width: 50%;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 35%;
     float: left;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 5%;
+    padding: 16px;
+    & + .pickup-box {
+      margin-left: 5%;
+      margin-right: 10%;
+    }
   }
 
-  .post-box-outer {
-    margin-bottom: 30px;
+  @media (max-width: 767px) {
+    .pickup-box-outer {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .pickup-box {
+      width: 100%;
+      float: none;
+      & + .pickup-box {
+        margin-left: 0;
+      }
+    }
   }
-
-  .post-box-outer::after {
-    content: '';
+  .pickup-image-box {
+    margin-top: -16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pickup-image {
     display: block;
-    clear: both;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
   }
 
-  .post-box {
-    width: 33.3%;
-    float: left;
+  .pickup-title, .pickup-year, .pickup-tags {
+    text-align: center;
+  }
+  .pickup-title {
+    font-size: 2.2rem;
   }
 
+.pickup-tags {
+  li {
+    display: inline-block;
+    font-size: 1.2rem;
+    & +li {
+      margin-left: 6px;
+    }
+  }
+}
+
+  .common-more-box {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    .more-link {
+      display: block;
+      max-width: 300px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0.5em;
+      color: #000;
+      border: 1px solid #000;
+      background-color: transparent;
+      transition: background-color 0.3s;
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+
+  .common-content-title {
+    margin-top: -28px;
+    img {
+      display: block;
+    }
+    &.contact-content-title {
+      background-color: #ffd6ed;
+    }
+  }
+
+  .about-content-box,
+  .contact-content-box {
+    margin-top: -13px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about-content-box {
+    background-color: #ffd6ed;
+    padding-bottom: 100px;
+  }
+
+  .contact-content-box {
+    background-color: #eeffbd;
+    padding-bottom: 100px;
+  }
+
+  .common-article-title {
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
 </style>
