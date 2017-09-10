@@ -2,18 +2,7 @@
   <div class="hello">
     <div class="wrapper-header">
     </div>
-    <div class="wrapper">
-      <header>
-        <h1>becolomochi's portfolio</h1>
-      </header>
-      <nav class="header-nav">
-        <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/product">Product</router-link></li>
-          <li><router-link to="/contact">Contact</router-link></li>
-        </ul>
-      </nav>
-
+    <div class="top-wrapper">
       <section class="pickup-box-outer">
         <h2><img src="../assets/title_product.svg" alt="product" class="common-content-title"></h2>
         <div class="pickup-box-inner">
@@ -63,19 +52,14 @@
       </article>
 
     </div>
-    <navigation></navigation>
   </div>
 </template>
 
 <script>
-  import Navigation from '@/components/parts/Navigation'
   export default {
     name: 'hello',
     title: 'Top',
     description: 'べこ（becolomochi）のポートフォリオサイト',
-    components: {
-      navigation: Navigation
-    },
     props: ['data']
   }
 

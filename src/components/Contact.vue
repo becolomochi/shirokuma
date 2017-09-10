@@ -1,9 +1,5 @@
 <template>
   <div class="wrapper">
-    <header>
-      <h1>becolomochi's portfolio</h1>
-    </header>
-    <navigation></navigation>
     <main>
       <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-horizontal">
         <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA" /><input name="SHEET_NAME" type="hidden" value="フォームデータ" />
@@ -36,13 +32,9 @@
 </template>
 
 <script>
-  import Navigation from '@/components/parts/Navigation'
   export default {
     title: 'Contact',
     description: 'べこ（becolomochi）へのお問い合わせページ',
-    components: {
-      navigation: Navigation
-    },
     methods: {
       sendMessage() {
         var form = $('form');

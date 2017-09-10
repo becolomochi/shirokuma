@@ -1,9 +1,5 @@
 <template>
   <div class="wrapper">
-    <header>
-      <h1>becolomochi's portfolio</h1>
-    </header>
-    <navigation></navigation>
     <main>
       <h1>ページが見つかりません</h1>
     </main>
@@ -11,12 +7,8 @@
 </template>
 
 <script>
-  import Navigation from '@/components/parts/Navigation'
   export default {
     title: 'Not Found',
-    description: '',
-    components: {
-      navigation: Navigation
-    }
+    description: ''
   }
 </script>
