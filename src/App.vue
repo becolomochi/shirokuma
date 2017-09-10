@@ -1,6 +1,13 @@
 <template>
   <div id="app">
+    <div class="header-outer">
+      <header>
+        <h1 class="site-title"><router-link to="/">becolomochi's portfolio</router-link></h1>
+      </header>
+      <hnav></hnav>
+    </div>
     <router-view :data="myData"></router-view>
+    <fnav></fnav>
     <footer>
       <div class="copyright-box">© 2017 beco</div>
     </footer>
@@ -8,9 +15,15 @@
 </template>
 
 <script>
+  import HeaderNav from '@/components/parts/NavHeader'
+  import FooterNav from '@/components/parts/NavFooter'
   import myData from '../static/data.json'
   export default {
     name: 'app',
+    components: {
+      hnav: HeaderNav,
+      fnav: FooterNav
+    },
     data () {
       return {
         myData: myData
@@ -19,42 +32,60 @@
   }
 </script>
 
-<style>
-  html, body { margin: 0;padding: 0;}
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+<style lang="scss">
+  .header-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
   }
-  .wrapper-header {
-    height: 100px;background-color: #f7f7f7;
+  .site-title {
+    font-size: 2.0rem;
+    a {
+      color: #000;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
-  .wrapper {
-    max-width: 1200px;
-    margin-left: auto;margin-right: auto;
-  }
-  h1,
-  h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  a {
-    color: #42b983;
-  }
-
-  .copyright-box {
-    margin-top: 40px;
+    .header-nav {
+      a {
+        color: #000;
+        &:hover {
+          text-decoration: none;
+          border-bottom-color: #000;
+        }
+      }
+    }
+  @media (min-width: 768px) {
+    header, .header-nav {
+      text-align: left;
+    }
+    .header-outer::after {
+      content: '';
+      display: block;
+      overflow: hidden;
+    }
+    .site-title {
+      float: left;
+      width: 50%;
+      margin-top: 15px;
+      margin-bottom: 0;
+      margin-left: 20px;
+      font-size: 2.0rem;
+    }
+    .header-nav {
+      float: right;
+      ul {
+        margin-right: 16px;
+      }
+      a {
+        display: inline-block;
+        padding: 16px;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom 0.3s;
+      }
+    }
   }
 </style>

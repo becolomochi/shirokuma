@@ -1,33 +1,33 @@
 <template>
   <div class="wrapper">
-    <header>
-      <h1>becolomochi's portfolio</h1>
-    </header>
-    <navigation></navigation>
     <main>
-      <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-horizontal">
-        <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA" /><input name="SHEET_NAME" type="hidden" value="フォームデータ" />
-        <div class="form-group">
-          <label class="col-md-2 control-label">Mail</label>
-          <div class="col-md-10">
+      <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-box">
+        <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA">
+        <input name="SHEET_NAME" type="hidden" value="フォームデータ">
+
+        <h1>Contact お問い合わせ</h1>
+
+        <div class="form-item-box">
+          <label class="control-label">Mail</label>
+          <div class="">
             <input type="email" class="form-control" name="your-email" placeholder="your@email.com">
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label">お名前</label>
-          <div class="col-md-10">
+        <div class="form-item-box">
+          <label class="control-label">お名前</label>
+          <div class="">
             <input type="text" class="form-control" name="your-name" placeholder="Your Name">
           </div>
         </div>
-        <div class="form-group">
-          <label class="col-md-2 control-label">メッセージ</label>
-          <div class="col-md-10">
-            <textarea class="form-control" name="your-message" placeholder="Message" required></textarea>
+        <div class="form-item-box">
+          <label class="control-label">メッセージ <span class="label-required">必須</span></label>
+          <div class="">
+            <textarea class="form-control" name="your-message" placeholder="Message" rows="8" required id="message"></textarea>
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-md-offset-2 col-md-10">
-            <button class="btn btn-primary" type="submit" v-on:click="sendMessage()">送信</button>
+        <div class="form-item-box">
+          <div class="form-button-box">
+            <button class="form-button" type="submit" v-on:click="sendMessage()">Submit</button>
           </div>
         </div>
       </form>
@@ -36,17 +36,17 @@
 </template>
 
 <script>
-  import Navigation from '@/components/parts/Navigation'
   export default {
     title: 'Contact',
     description: 'べこ（becolomochi）へのお問い合わせページ',
-    components: {
-      navigation: Navigation
-    },
     methods: {
       sendMessage() {
         var form = $('form');
         var submitBtn = form.find('button[type=submit]');
+        if(getElementById("message") ==="") {
+          alert("メッセージを入力してください");
+          return false;
+        }
         $.ajax({
           url: form.attr('action'),
           dataType: 'jsonp',
@@ -63,18 +63,51 @@
           }
         });
       }
-    },
-    mounted() {
-      var required_tag, requires;
-      required_tag = '<span class="label label-danger">必須</span>';
-      requires = $('form [required]').each(function(i, elm) {
-        return $(elm).before(required_tag);
-      });
     }
   }
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+  .form-box {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .form-control {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    padding: 4px 8px;
+  }
+  .form-item-box {
+    & + .form-item-box {
+      margin-top: 20px;
+    }
+  }
+  .control-label {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .label-required {
+    font-size: 1.2rem;
+    color: #f44336;
+  }
+  .form-button {
+    cursor: pointer;
+    display: block;
+    max-width: 400px;
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 0 #ddd;
+    &:hover {
+      background-color: #f7f7f7;
+    }
+  }
 
 </style>
