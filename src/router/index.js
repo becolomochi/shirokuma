@@ -10,6 +10,7 @@ import PageNotFound from '@/components/PageNotFound'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -18,24 +19,20 @@ export default new Router({
     },
     {
       path: '/product',
-      name: 'Product',
       component: LayoutProduct,
       children: [
         {
           path: '/',
+          name: 'Product',
           component: ProductTop
         },
         {
           path: ':slug',
+          name: 'ProductDetail',
           component: ProductDetail
         }
       ]
     },
-//    {
-//      path: '/product/detail',
-//      name: 'Product Detail',
-//      component: ProductDetail
-//    },
     {
       path: '/contact',
       name: 'Contact',

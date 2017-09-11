@@ -34,7 +34,7 @@
     },
     computed: {
       filteredData: function () {
-        var url = window.location.protocol+ '//' + window.location.host + '/#/product/'
+        var url = window.location.protocol+ '//' + window.location.host + '/product/'
         var matchData = this.myData.filter(function(item, index){
           if (item.slug === window.location.href.replace(url, '')) return true;
         })
