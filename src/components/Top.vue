@@ -9,11 +9,11 @@
             <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
               <img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image">
             </div>
-            <h1 class="pickup-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-            <p class="pickup-year">制作年：{{ d.year }}</p>
+            <h1 class="pickup-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+            <p class="pickup-year" v-cloak>制作年：{{ d.year }}</p>
             <div class="common-tags">
               <ul>
-                <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag">{{ t }}</a></li>
+                <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
               </ul>
             </div>
           </article>

@@ -5,12 +5,12 @@
         <img :src="p.path" width="" height="" alt="" class="product-image common-thumb-image">
       </div>
       <div class="product-content-box">
-        <h1 class="product-title"><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-        <p class="product-description">{{ d.text }}</p>
-        <p class="product-year">制作年：{{ d.year }}</p>
+        <h1 class="product-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+        <p class="product-description" v-cloak>{{ d.text }}</p>
+        <p class="product-year" v-cloak>制作年：{{ d.year }}</p>
         <div class="common-tags">
           <ul>
-            <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag">{{ t }}</a></li>
+            <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
           </ul>
         </div>
       </div>
