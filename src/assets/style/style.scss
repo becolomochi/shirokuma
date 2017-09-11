@@ -1,6 +1,11 @@
 @charset 'utf-8';
 @import '_reset.css';
 
+/** v-cloak */
+[v-cloak] {
+  display: none;
+}
+
 /** common */
 html {
   font-size: 62.5%;

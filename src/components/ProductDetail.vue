@@ -7,15 +7,15 @@
       </ul>
     </nav>
     <article class="product-box">
-      <h1 class="product-title">{{ filteredData.title }}</h1>
+      <h1 class="product-title" v-cloak>{{ filteredData.title }}</h1>
       <div v-for="p in filteredData.picture" v-if="p.id === '1'">
         <img :src="p.path" width="" height="" alt="" class="product-image">
       </div>
-      <p class="product-description">{{ filteredData.text }}</p>
-      <p class="product-year">制作年：{{ filteredData.year }}</p>
+      <p class="product-description" v-cloak>{{ filteredData.text }}</p>
+      <p class="product-year" v-cloak>制作年：{{ filteredData.year }}</p>
       <div class="product-tags">
         <ul>
-          <li v-for="t in filteredData.tags"><a href="#" class="tag">{{ t }}</a></li>
+          <li v-for="t in filteredData.tags"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
         </ul>
       </div>
     </article>
