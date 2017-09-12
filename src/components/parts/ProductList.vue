@@ -2,7 +2,7 @@
   <div>
     <article class="product-box" v-for="d in data">
       <div v-for="p in d.picture" v-if="p.id === '1'" class="product-image-box common-thumb-box">
-        <img :src="p.path" width="" height="" alt="" class="product-image common-thumb-image">
+        <img :src="p.path" width="" height="" alt="" class="common-thumb-image">
       </div>
       <div class="product-content-box">
         <h1 class="product-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
@@ -38,12 +38,37 @@
   .product-image-box {
     display: table-cell;
     width: 320px;
-    height: 240px;
+    height: 176px;
     border: 1px solid #f7f7f7;
   }
   .product-content-box {
     display: table-cell;
     padding-left: 30px;
     vertical-align: middle;
+  }
+
+  @media (max-width: 767px) {
+    .product-box {
+      display: block;
+      & + .product-box {
+        margin-top: 50px;
+      }
+    }
+    .product-title {
+      font-size: 2.0rem;
+      margin-top: 0;
+    }
+    .product-image-box {
+      display: block;
+      width: 300px;
+      height: 150px;
+      margin: 0 auto 10px;
+    }
+    .product-content-box {
+      display: block;
+      padding-left: 0;
+      text-align: center;
+      vertical-align: baseline;
+    }
   }
 </style>
