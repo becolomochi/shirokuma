@@ -1,67 +1,53 @@
 [
   {
-    "id": "1",
-    "slug": "test",
-    "title": "作品名",
-    "year": "2016年",
-    "text": "1つめの内容",
+    "slug": "gezicht",
+    "title": "gezicht ダムの素顔を追った一年間の記録。",
+    "year": "2017年",
+    "description": "CSS3の縦書きスタイルを使用したWebサイト",
+    "text": "たてよこWebアワード出品作品。CSS3の縦書きを使用したWebサイト。",
+    "role": "構築・設計・コーディング・ライティング・写真撮影",
+    "urlTitle": "gezicht",
+    "url": "//dam.becolomochi.com/gezicht",
     "tags": [
       "個人活動",
-      "Webサイト"
+      "Webサイト制作"
     ],
     "picture" : [
       {
         "id": "1",
-        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNUUjV5enF3UWxLNnM"
+        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNURjFDdm5fM3FfNVk"
       },
       {
         "id": "2",
-        "path": "http://placehold.it/32x32"
+        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNUUEdQSWlxR2lMa28"
       },
       {
         "id": "3",
-        "path": "http://placehold.it/32x32"
-      },
-      {
-        "id": "4",
-        "path": "http://placehold.it/32x32"
-      },
-      {
-        "id": "5",
-        "path": "http://placehold.it/32x32"
+        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNUWnZRQldYSi02T2M"
       }
     ]
   },
   {
-    "id": "2",
-    "slug": "test2",
-    "title": "作品名2",
-    "year": "2015年",
-    "text": "2つ目の内容",
+    "slug": "ghpages",
+    "title": "べこ のプロフィール - GitHub pages",
+    "year": "2017年",
+    "description": "自身関連のURLをまとめたGitHub pages",
+    "text": "自身関連のURLをまとめたGitHub pages",
+    "role": "デザイン・コーディング・イラスト",
+    "urlTitle": "GitHub pages",
+    "url": "//develop.becolomochi.com",
     "tags": [
-      "大学",
-      "手製本"
+      "個人活動",
+      "Webサイト制作"
     ],
     "picture" : [
       {
         "id": "1",
-        "path": "http://placehold.it/32x32"
+        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNUc0J1aFNod2FPRUk"
       },
       {
         "id": "2",
-        "path": "http://placehold.it/32x32"
-      },
-      {
-        "id": "3",
-        "path": "http://placehold.it/32x32"
-      },
-      {
-        "id": "4",
-        "path": "http://placehold.it/32x32"
-      },
-      {
-        "id": "5",
-        "path": "http://placehold.it/32x32"
+        "path": "http://drive.google.com/uc?export=view&id=0BzPW0pNckTNUWVRJQnBXUTF2RFU"
       }
     ]
   }

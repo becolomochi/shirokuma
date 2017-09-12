@@ -117,11 +117,15 @@ header, nav, footer {
 .common-thumb-image {
   display: block;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  top: 60%;
+  left: 60%;
+  transform: translate(-60%, -55%);
+  width: 120%;
   height: auto;
 }
 
-
+.product-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
