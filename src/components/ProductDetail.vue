@@ -30,11 +30,19 @@
 <script>
   import myData from '../../static/data.json'
   export default {
-    title: '作品タイトル',
-    description: 'べこ（becolomochi）の作品内容',
     data () {
       return {
         myData: myData
+      }
+    },
+    mounted() {
+      document.title = this.filteredData.title + '- becolomochi\'s portfolio'
+
+      let meta = document.getElementsByTagName('meta')
+      for (var i = 0; i < meta.length; i++) {
+        if (meta[i].name.toLowerCase() == 'description') {
+          meta[i].content = 'becolomochiが作成した ' + this.filteredData.title + ' のページです'
+        }
       }
     },
     computed: {
