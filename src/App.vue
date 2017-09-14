@@ -6,7 +6,9 @@
       </header>
       <hnav></hnav>
     </div>
-    <router-view :data="myData"></router-view>
+    <transition name="fade">
+      <router-view :data="myData"></router-view>
+    </transition>
     <fnav></fnav>
     <footer>
       <div class="copyright-box">© 2017 beco</div>
@@ -33,6 +35,18 @@
 </script>
 
 <style lang="scss">
+  /** Transition */
+  .fade-enter-active {
+    transition: opacity 1s ease-in
+  }
+  .fade-leave-active {
+    transition: opacity .1s ease-out
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }
+
+  /** Contents */
   .header-outer {
     position: fixed;
     top: 0;
