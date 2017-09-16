@@ -1,6 +1,10 @@
 @charset 'utf-8';
 @import '_reset.css';
 
+/** Variables */
+$c-text: hsl(50, 20%, 20%);
+$c-link: hsl(200, 50%, 60%);
+
 /** v-cloak */
 [v-cloak] {
   display: none;
@@ -8,6 +12,7 @@
 
 /** common */
 html {
+  color: $c-text;
   font-size: 62.5%;
 }
 body {
@@ -43,7 +48,7 @@ p {
 }
 /** Link */
 a {
-  color: #95a5d8;
+  color: $c-link;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -55,7 +60,6 @@ a {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 /** wrapper */
 .wrapper-header {
@@ -75,11 +79,6 @@ a {
     margin-right: 10px;
   }
 }
-.top-wrapper {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 /** Header */
 .header-nav, .footer-nav {
@@ -88,9 +87,65 @@ a {
     margin: 0 10px;
   }
   a {
-    color: #000;
+    color: $c-text;
   }
 }
+/** Header Contents */
+.header-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.site-title {
+  font-size: 2.0rem;
+  a {
+    color: $c-text;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.header-nav {
+  a {
+    color: $c-text;
+    &:hover {
+      text-decoration: none;
+      border-bottom-color: currentColor;
+    }
+  }
+}
+  @media (min-width: 768px) {
+    header, .header-nav {
+      text-align: left;
+    }
+    .header-outer::after {
+      content: '';
+      display: block;
+      overflow: hidden;
+    }
+    .site-title {
+      float: left;
+      width: 50%;
+      margin-top: 15px;
+      margin-bottom: 0;
+      margin-left: 20px;
+      font-size: 2.0rem;
+    }
+    .header-nav {
+      float: right;
+      ul {
+        margin-right: 16px;
+      }
+      a {
+        display: inline-block;
+        padding: 16px;
+        border-bottom: 3px solid transparent;
+        transition: border-bottom 0.3s;
+      }
+    }
+  }
 
 /** Footer */
 .footer-nav {
@@ -103,7 +158,7 @@ a {
   color: #666;
 }
 
-header, nav, footer {
+nav, footer {
   text-align: center;
 }
 
@@ -136,4 +191,26 @@ header, nav, footer {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/** Common more box */
+.common-more-box {
+  text-align: center;
+  margin-top: 6em;
+  margin-bottom: 1em;
+  .more-link {
+    display: block;
+    max-width: 300px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5em;
+    border: 1px solid CurrentColor;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: $c-link;
+    }
+  }
 }

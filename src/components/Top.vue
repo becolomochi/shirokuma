@@ -2,29 +2,28 @@
   <div class="hello">
     <div class="wrapper-header">
     </div>
-    <div class="top-wrapper">
-      <section class="pickup-box-outer">
-        <div class="pickup-box-inner">
-          <article class="pickup-box" v-for="d in data">
-            <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
-              <router-link :to="'/product/' + d.slug"><img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image"></router-link>
-            </div>
-            <h1 class="pickup-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-            <p class="pickup-year" v-cloak>制作年：{{ d.year }}</p>
-            <div class="common-tags">
-              <ul>
-                <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
-              </ul>
-            </div>
-          </article>
-        </div>
-        <div class="common-more-box">
-          <router-link to="/product" class="more-link">もっと見る</router-link>
-        </div>
-      </section>
+    <section class="pickup-box-outer">
+      <div class="pickup-box-inner">
+        <article class="pickup-box" v-for="d in data">
+          <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
+            <router-link :to="'/product/' + d.slug"><img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image"></router-link>
+          </div>
+          <h1 class="pickup-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+          <div class="common-tags">
+            <ul>
+              <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="common-more-box">
+        <router-link to="/product" class="more-link">もっと見る</router-link>
+      </div>
+    </section>
 
-      <article class="common-box-outer">
-        <h2 class="common-content-title"><img src="../assets/title_about.svg" alt="about" class="common-content-title"></h2>
+    <article class="common-box-outer about-box">
+      <div class="common-box-inner">
+        <h2 class="common-content-title"><img src="../assets/img/title_img_about.svg" alt="about" class="common-content-title" width="258"></h2>
         <div class="about-content-box">
           <h1 class="common-article-title">このサイトについて</h1>
           <div class="common-text">
@@ -34,10 +33,12 @@
         <div class="about-thumb-box">
           <img src="" width="" height="" alt="" class="about-image">
         </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="common-box-outer">
-        <h2 class="common-content-title contact-content-title"><img src="../assets/title_contact.svg" alt="contact" class="common-content-title"></h2>
+    <article class="common-box-outer contact-box">
+      <div class="common-box-inner">
+        <h2 class="common-content-title contact-content-title"><img src="../assets/img/title_img_contact.svg" alt="contact" class="common-content-title" width="214"></h2>
         <div class="contact-content-box">
           <h1 class="common-article-title">お問い合わせ</h1>
           <div class="common-text">
@@ -48,9 +49,8 @@
         <div class="about-thumb-box">
           <img src="" width="" height="" alt="" class="about-image">
         </div>
-      </article>
-
-    </div>
+      </div>
+    </article>
   </div>
 </template>
 
@@ -71,10 +71,11 @@
   }
   .pickup-box-outer {
     position: relative;
-    margin-top: 50px;
-    margin-bottom: 100px;
+    max-width: 1200px;
+    margin: 100px auto;
   }
 
+  /** Pickup */
   .pickup-box-inner::after {
     content: '';
     display: block;
@@ -121,60 +122,78 @@
     margin-right: -16px;
     height: 180px;
   }
-  .pickup-title, .pickup-year, .pickup-tags {
-    text-align: center;
-  }
   .pickup-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
-  .common-more-box {
-    text-align: center;
-    margin-top: 3em;
-    margin-bottom: 1em;
-    .more-link {
+
+  /** common contents */
+  .common-box-outer {
+    position: relative;
+    &:before {
+      position: absolute;
+      top: -20px;
+      content: '';
       display: block;
-      max-width: 300px;
-      width: 80%;
-      margin: 0 auto;
-      padding: 0.5em;
-      color: #000;
-      border: 1px solid #000;
-      background-color: transparent;
-      transition: background-color 0.3s;
-      &:hover {
-        text-decoration: none;
-        color: #fff;
-        background-color: #000;
+      width: 100%;
+      height: 30px;
+    }
+    &.about-box {
+      margin-top: 200px;
+      padding-bottom: 200px;
+      background-color: #f7f7f7;
+      &:before {
+        background:url(../assets/img/title_bg_about.svg) repeat-x;
+      }
+      .common-content-title {
+        position: absolute;
+        top: -53px;
+        z-index: -1;
+      }
+    }
+    &.contact-box {
+      z-index: 1;
+      background-color: #f5f5f5;
+      &:before {
+        background:url(../assets/img/title_bg_contact.svg) repeat-x;
+      }
+      .common-content-title {
+        position: absolute;
+        top: -63px;
+        z-index: -1;
       }
     }
   }
-
-  .common-content-title {
-    margin-top: -28px;
-    img {
-      display: block;
-    }
-    &.contact-content-title {
-      background-color: #fff0f1;
-    }
+  .common-box-inner {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about-content-box,
   .contact-content-box {
+    position: relative;
     margin-top: -13px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
+    &:before {
+      position: absolute;
+      top: -20px;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 30px;
+    }
   }
 
   .about-content-box {
-    background-color: #fff0f1;
+    background-color: #f7f7f7;
     padding-bottom: 100px;
   }
 
   .contact-content-box {
-    background-color: #f3fee7;
+    background-color: #f5f5f5;
     padding-bottom: 100px;
   }
 
