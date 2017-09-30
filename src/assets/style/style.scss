@@ -9,6 +9,16 @@ $c-link: hsl(200, 50%, 60%);
 [v-cloak] {
   display: none;
 }
+/** Transition */
+.fade-enter-active {
+  transition: opacity 1s ease-in
+}
+.fade-leave-active {
+  transition: opacity .1s ease-out
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0
+}
 
 /** common */
 html {
@@ -127,7 +137,7 @@ a {
     }
     .site-title {
       float: left;
-      width: 50%;
+      width: 30%;
       margin-top: 15px;
       margin-bottom: 0;
       margin-left: 20px;
@@ -214,3 +224,15 @@ nav, footer {
     }
   }
 }
+
+/** Profile */
+.profile-lists {
+  list-style: circle;
+  list-style-position: inside;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+.profile-paragraph {
+  font-size: 1.4rem;
+}
+

@@ -25,13 +25,22 @@
       <div class="common-box-inner">
         <h2 class="common-content-title"><img src="../assets/img/title_img_about.svg" alt="about" class="common-content-title" width="258"></h2>
         <div class="about-content-box">
-          <h1 class="common-article-title">このサイトについて</h1>
-          <div class="common-text">
-            <p>内容内容内容内容内容内容内容</p>
+          <h1 class="common-article-title">About becolomochi</h1>
+          <div class="top-profile-box">
+            <div class="profile-thumb-box">
+              <img src="../assets/img/icon1.png" width="120" height="120" alt="icon1" class="about-image">
+              <img src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1" class="about-image">
+            </div>
+            <div class="common-text">
+              <h2>べこ beco</h2>
+              <ul class="profile-lists">
+              <li>DTP6年。うち、後半3年は WordPress サイトの設定・コーディング</li>
+              <li>転職（正確には部署異動）Webデザイン・コーダー3年</li>
+              <li>京都造形芸術大学 通信教育部 情報デザインコース卒業</li>
+              </ul>
+              <p><router-link to="/about">くわしく見る</router-link></p>
+            </div>
           </div>
-        </div>
-        <div class="about-thumb-box">
-          <img src="" width="" height="" alt="" class="about-image">
         </div>
       </div>
     </article>
@@ -41,13 +50,10 @@
         <h2 class="common-content-title contact-content-title"><img src="../assets/img/title_img_contact.svg" alt="contact" class="common-content-title" width="214"></h2>
         <div class="contact-content-box">
           <h1 class="common-article-title">お問い合わせ</h1>
-          <div class="common-text">
+          <div class="common-text top-contact-box">
             <p>Twitter</p>
             <p>フォーム</p>
           </div>
-        </div>
-        <div class="about-thumb-box">
-          <img src="" width="" height="" alt="" class="about-image">
         </div>
       </div>
     </article>
@@ -141,7 +147,8 @@
     &.about-box {
       margin-top: 200px;
       padding-bottom: 200px;
-      background-color: #f7f7f7;
+      background-color: #b1d1e1;
+;
       &:before {
         background:url(../assets/img/title_bg_about.svg) repeat-x;
       }
@@ -153,7 +160,7 @@
     }
     &.contact-box {
       z-index: 1;
-      background-color: #f5f5f5;
+      background-color: #66aacc;
       &:before {
         background:url(../assets/img/title_bg_contact.svg) repeat-x;
       }
@@ -188,13 +195,11 @@
   }
 
   .about-content-box {
-    background-color: #f7f7f7;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   .contact-content-box {
-    background-color: #f5f5f5;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   .common-article-title {
@@ -202,4 +207,21 @@
     font-size: 1.4rem;
     font-weight: bold;
   }
+
+/** Profile */
+.top-profile-box {
+  background-color: #fff;
+  padding: 40px 60px;
+}
+@media (min-width: 768px) {
+  .profile-thumb-box {
+    float: right;
+    margin-top: 40px;
+  }
+}
+/** Contact */
+.top-contact-box {
+  background-color: #fff;
+  padding: 40px 60px;
+}
 </style>

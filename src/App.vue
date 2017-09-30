@@ -33,16 +33,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-  /** Transition */
-  .fade-enter-active {
-    transition: opacity 1s ease-in
-  }
-  .fade-leave-active {
-    transition: opacity .1s ease-out
-  }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
-  }
-</style>

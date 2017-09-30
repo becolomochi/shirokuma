@@ -2,6 +2,7 @@
   <nav class="footer-nav">
     <ul>
       <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/about">About</router-link></li>
       <li><router-link to="/product">Product</router-link></li>
       <li><router-link to="/contact">Contact</router-link></li>
       <li><router-link to="/sitemap">Sitemap</router-link></li>
