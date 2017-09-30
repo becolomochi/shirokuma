@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="top">
     <div class="wrapper-header">
     </div>
     <section class="pickup-box-outer">
@@ -9,11 +9,6 @@
             <router-link :to="'/product/' + d.slug"><img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image"></router-link>
           </div>
           <h1 class="pickup-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
-          <div class="common-tags">
-            <ul>
-              <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
-            </ul>
-          </div>
         </article>
       </div>
       <div class="common-more-box">
@@ -32,13 +27,13 @@
               <img src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1" class="about-image">
             </div>
             <div class="common-text">
-              <h2>べこ beco</h2>
-              <ul class="profile-lists">
+              <h2 class="profile-title">べこ beco</h2>
+              <ul class="profile-lists top-profile-lists">
               <li>DTP6年。うち、後半3年は WordPress サイトの設定・コーディング</li>
               <li>転職（正確には部署異動）Webデザイン・コーダー3年</li>
               <li>京都造形芸術大学 通信教育部 情報デザインコース卒業</li>
               </ul>
-              <p><router-link to="/about">くわしく見る</router-link></p>
+              <p class="profile-more-link"><router-link to="/about">くわしく見る</router-link></p>
             </div>
           </div>
         </div>
@@ -62,7 +57,7 @@
 
 <script>
   export default {
-    name: 'hello',
+    name: 'top',
     title: 'Top',
     description: 'べこ（becolomochi）のポートフォリオサイト',
     props: ['data']
@@ -72,156 +67,50 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  .wrapper-header {
+    background-color: #f7f7f7;
+    height: 400px;
+  }
+
   section + section {
     margin-bottom: 100px;
   }
-  .pickup-box-outer {
-    position: relative;
-    max-width: 1200px;
-    margin: 100px auto;
-  }
 
-  /** Pickup */
-  .pickup-box-inner::after {
+/** common contents */
+.common-box-outer {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: -20px;
     content: '';
     display: block;
-    clear: both;
+    width: 100%;
+    height: 30px;
   }
-
-  .pickup-box {
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    width: 35%;
-    float: left;
-    margin-top: 10px;
-    margin-left: 10%;
-    margin-right: 5%;
-    padding: 16px;
-    & + .pickup-box {
-      margin-left: 5%;
-      margin-right: 10%;
-    }
-  }
-
-  @media (max-width: 767px) {
-    .pickup-box-outer {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    .pickup-box {
-      max-width: 480px;
-      width: 90%;
-      float: none;
-      margin-left: auto;
-      margin-right: auto;
-      & + .pickup-box {
-        margin-top: 60px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
-  .pickup-image-box {
-    margin-top: -16px;
-    margin-left: -16px;
-    margin-right: -16px;
-    height: 180px;
-  }
-  .pickup-title {
-    font-size: 1.8rem;
-  }
-
-
-  /** common contents */
-  .common-box-outer {
-    position: relative;
+  &.about-box {
+    margin-top: 200px;
+    padding-bottom: 200px;
+    background-color: #b1d1e1;
     &:before {
+      background:url(../assets/img/title_bg_about.svg) repeat-x;
+    }
+    .common-content-title {
       position: absolute;
-      top: -20px;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 30px;
-    }
-    &.about-box {
-      margin-top: 200px;
-      padding-bottom: 200px;
-      background-color: #b1d1e1;
-;
-      &:before {
-        background:url(../assets/img/title_bg_about.svg) repeat-x;
-      }
-      .common-content-title {
-        position: absolute;
-        top: -53px;
-        z-index: -1;
-      }
-    }
-    &.contact-box {
-      z-index: 1;
-      background-color: #66aacc;
-      &:before {
-        background:url(../assets/img/title_bg_contact.svg) repeat-x;
-      }
-      .common-content-title {
-        position: absolute;
-        top: -63px;
-        z-index: -1;
-      }
+      top: -53px;
+      z-index: -1;
     }
   }
-  .common-box-inner {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-content-box,
-  .contact-content-box {
-    position: relative;
-    margin-top: -13px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+  &.contact-box {
+    z-index: 1;
+    background-color: #66aacc;
     &:before {
+      background:url(../assets/img/title_bg_contact.svg) repeat-x;
+    }
+    .common-content-title {
       position: absolute;
-      top: -20px;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 30px;
+      top: -63px;
+      z-index: -1;
     }
   }
-
-  .about-content-box {
-    padding-bottom: 50px;
-  }
-
-  .contact-content-box {
-    padding-bottom: 50px;
-  }
-
-  .common-article-title {
-    margin-top: 0;
-    font-size: 1.4rem;
-    font-weight: bold;
-  }
-
-/** Profile */
-.top-profile-box {
-  background-color: #fff;
-  padding: 40px 60px;
-}
-@media (min-width: 768px) {
-  .profile-thumb-box {
-    float: right;
-    margin-top: 40px;
-  }
-}
-/** Contact */
-.top-contact-box {
-  background-color: #fff;
-  padding: 40px 60px;
 }
 </style>
