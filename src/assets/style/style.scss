@@ -76,7 +76,7 @@ p {
 a {
   color: $c-link;
   text-decoration: none;
-  &:hover {
+  &:hover, &.hover {
     text-decoration: underline;
   }
 }
@@ -126,7 +126,7 @@ a {
   font-size: 2.0rem;
   a {
     color: $c-text;
-    &:hover {
+    &:hover, &.hover {
       text-decoration: none;
     }
   }
@@ -136,7 +136,7 @@ a {
     font-size: 1.4rem;
     font-weight: bold;
     color: $c-text;
-    &:hover {
+    &:hover, &.hover {
       text-decoration: none;
       border-bottom-color: currentColor;
     }
@@ -233,7 +233,7 @@ nav, footer {
     border: 1px solid CurrentColor;
     background-color: transparent;
     transition: background-color 0.3s;
-    &:hover {
+    &:hover, &.hover {
       text-decoration: none;
       color: #fff;
       background-color: $c-link;
@@ -400,4 +400,32 @@ nav, footer {
 .top-contact-box {
   background-color: #fff;
   padding: 40px 60px;
+}
+
+/** top wrapper header */
+@keyframes bgGradient {
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+
+.top-wrapper-header {
+  position: relative;
+  height: 400px;
+  background-image: linear-gradient(to bottom right, #f1f6fb, #c4ddfa, #ffeec9, #fabcb1, #ffeec9, #c4ddfa, #f1f6fb);
+  background-size: 1000%;
+  animation: bgGradient 60s linear infinite forwards;
+}
+
+@media (max-width: $b-small-max) {
+  .top-wrapper-header {
+    height: 100vh;
+  }
+}
+$width: 800px;
+.img-top-catch {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - #{$width} / 2);
+  max-width: $width;
 }
