@@ -86,7 +86,7 @@
   &.about-box {
     margin-top: 200px;
     padding-bottom: 200px;
-    background-color: #b1d1e1;
+    background-color: #ffeec9;
     &:before {
       background:url(../assets/img/title_bg_about.svg) repeat-x;
     }
@@ -98,7 +98,7 @@
   }
   &.contact-box {
     z-index: 1;
-    background-color: #66aacc;
+    background-color: #fabcb1;
     &:before {
       background:url(../assets/img/title_bg_contact.svg) repeat-x;
     }
