@@ -1,6 +1,7 @@
 <template>
   <div class="top">
-    <div class="wrapper-header">
+    <div class="top-wrapper-header">
+      <img src="../assets/img/img_top_catch.svg" alt="暖かくて優しいしなやかなコミュニケーションを" class="img-top-catch">
     </div>
     <section class="pickup-box-outer">
       <div class="pickup-box-inner">
@@ -67,11 +68,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  .wrapper-header {
-    background-color: #f7f7f7;
-    height: 400px;
-  }
-
   section + section {
     margin-bottom: 100px;
   }
