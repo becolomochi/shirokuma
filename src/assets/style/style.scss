@@ -3,7 +3,8 @@
 
 /** Variables */
 $c-text: hsl(50, 20%, 20%);
-$c-link: hsl(200, 50%, 60%);
+//$c-link: hsl(200, 50%, 60%);
+$c-link: hsl(50, 20%, 20%);
 
 $b-small-max: 480px;
 $b-medium-min: $b-small-max + 1;
@@ -89,7 +90,7 @@ a {
 }
 /** wrapper */
 .wrapper {
-  width: 900px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -244,8 +245,8 @@ nav, footer {
 /** Profile */
 .profile-lists {
   list-style: circle;
-  list-style-position: inside;
-  margin-left: 10px;
+  list-style-position: outside;
+  margin-left: 30px;
   font-size: 1.4rem;
 }
 .profile-paragraph {
@@ -297,9 +298,6 @@ nav, footer {
       margin-right: auto;
     }
   }
-  .pickup-title {
-    text-align: center;
-  }
 }
 .pickup-image-box {
   margin-top: -16px;
@@ -307,10 +305,16 @@ nav, footer {
   margin-right: -16px;
   height: 180px;
 }
+@media (max-width: $b-small-max) {
+  .pickup-image-box {
+    height: 150px;
+  }
+}
 .pickup-title {
   margin-bottom: 0;
   font-weight: bold;
   font-size: 1.6rem;
+  text-align: center;
   a {
     color: $c-text;
   }

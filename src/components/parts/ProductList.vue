@@ -8,11 +8,6 @@
         <h1 class="product-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
         <p class="product-description" v-cloak>{{ d.text }}</p>
         <p class="product-year" v-cloak>制作年：{{ d.year }}</p>
-        <div class="common-tags">
-          <ul>
-            <li v-for="t in d.tags" class="tag-item"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
-          </ul>
-        </div>
       </div>
     </article>
   </div>
@@ -27,13 +22,21 @@
 <style scoped lang="scss">
   .product-box {
     display: table;
-    & + .product-box {
-      margin-top: 100px;
-    }
+    margin-top: 50px;
   }
   .product-title {
-    font-size: 2.8rem;
+    font-size: 2.0rem;
     margin-top: 0;
+  }
+  .product-description {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .product-year {
+    font-size: 1.3rem;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .product-image-box {
     display: table-cell;
@@ -54,10 +57,6 @@
         margin-top: 50px;
       }
     }
-    .product-title {
-      font-size: 2.0rem;
-      margin-top: 0;
-    }
     .product-image-box {
       display: block;
       width: 300px;
@@ -69,6 +68,23 @@
       padding-left: 0;
       text-align: center;
       vertical-align: baseline;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product-box {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .product-image-box {
+      width: 100%;
+    }
+    .product-content-box {
+      padding: 0 16px;
+    }
+    .product-title {
+      font-size: 1.6rem;
     }
   }
 </style>

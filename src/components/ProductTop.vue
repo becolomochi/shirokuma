@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Product</h1>
+    <h1>Product 作品紹介</h1>
     <product-list :data="myData"></product-list>
   </div>
 </template>
