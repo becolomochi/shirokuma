@@ -2,10 +2,10 @@
   <div>
     <article class="product-box" v-for="d in data">
       <div v-for="p in d.picture" v-if="p.id === '1'" class="product-image-box common-thumb-box">
-        <router-link :to="'/product/' + d.slug"><img :src="p.path" width="" height="" alt="" class="common-thumb-image"></router-link>
+        <router-link :to="'/works/' + d.slug"><img :src="p.path" width="" height="" alt="" class="common-thumb-image"></router-link>
       </div>
       <div class="product-content-box">
-        <h1 class="product-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+        <h1 class="product-title" v-cloak><router-link :to="'/works/' + d.slug">{{ d.title }}</router-link></h1>
         <p class="product-description" v-cloak>{{ d.text }}</p>
         <p class="product-year" v-cloak>制作年：{{ d.year }}</p>
       </div>

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Child from '@/components/parts/ProductList'
+  import Child from '@/components/parts/WorksList'
   import myData from '../../static/data.json'
   export default {
     title: 'Product',

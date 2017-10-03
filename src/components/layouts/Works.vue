@@ -9,7 +9,7 @@
 </template>
 
 <script>
-  import Child from '@/components/parts/ProductList'
+  import Child from '@/components/parts/WorksList'
   export default {
     components: {
       productList: Child

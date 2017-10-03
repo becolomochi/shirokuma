@@ -2,11 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Top from '@/components/Top'
 import About from '@/components/About'
-import LayoutProduct from '@/components/layouts/Product'
-import ProductTop from '@/components/ProductTop'
-import ProductDetail from '@/components/ProductDetail'
+import LayoutWorks from '@/components/layouts/Works'
+import WorksTop from '@/components/WorksTop'
+import WorksDetail from '@/components/WorksDetail'
 import Contact from '@/components/Contact'
-import Sitemap from '@/components/Sitemap'
 import PageNotFound from '@/components/PageNotFound'
 
 Vue.use(Router)
@@ -25,18 +24,18 @@ export default new Router({
       component: About
     },
     {
-      path: '/product',
-      component: LayoutProduct,
+      path: '/works',
+      component: LayoutWorks,
       children: [
         {
           path: '/',
-          name: 'Product',
-          component: ProductTop
+          name: 'Works',
+          component: WorksTop
         },
         {
           path: ':slug',
-          name: 'ProductDetail',
-          component: ProductDetail
+          name: 'WorksDetail',
+          component: WorksDetail
         }
       ]
     },
@@ -44,11 +43,6 @@ export default new Router({
       path: '/contact',
       name: 'Contact',
       component: Contact
-    },
-    {
-      path: '/sitemap',
-      name: 'Sitemap',
-      component: Sitemap
     },
     {
       path: '*',
