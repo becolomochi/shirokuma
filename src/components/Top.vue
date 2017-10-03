@@ -47,8 +47,11 @@
         <div class="contact-content-box">
           <h1 class="common-article-title">お問い合わせ</h1>
           <div class="common-text top-contact-box">
-            <p>Twitter</p>
-            <p>フォーム</p>
+            <p><router-link to="/contact" class="top-contact-link">お問い合わせフォーム</router-link></p>
+            <div class="sns-box">
+              <a href="https://twitter.com/becolomochi" target="_blank" class="sns-link"><img src="../assets/img/ico_twitter.svg" width="50" height="50" alt="Twitter"></a>
+              <a href="https://github.com/becolomochi" target="_blank" class="sns-link"><img src="../assets/img/ico_github.svg" width="50" height="50" alt="GitHub"></a>
+            </div>
           </div>
         </div>
       </div>
