@@ -4,7 +4,7 @@
 /** Variables */
 $c-text: hsl(50, 20%, 20%);
 //$c-link: hsl(200, 50%, 60%);
-$c-link: hsl(50, 20%, 20%);
+$c-link: hsl(9, 55%, 50%);
 
 $b-small-max: 480px;
 $b-medium-min: $b-small-max + 1;
@@ -223,7 +223,7 @@ nav, footer {
 /** Common more box */
 .common-more-box {
   text-align: center;
-  margin-top: 6em;
+  margin-top: 2em;
   margin-bottom: 1em;
   .more-link {
     display: block;
@@ -383,6 +383,7 @@ nav, footer {
 .profile-thumb-box {
   float: right;
   margin-top: 40px;
+  margin-left: 40px;
 }
 .profile-more-link {
   text-align: right;
@@ -391,6 +392,7 @@ nav, footer {
   .profile-thumb-box {
     float: none;
     margin-top: 10px;
+    margin-left: 0;
     text-align: center;
   }
   .profile-title {
@@ -414,7 +416,7 @@ nav, footer {
     border-right: 1px solid $c-link;
     width: 6px;
     height: 6px;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translate(0px, -3px);
   }
 }
 .sns-box {

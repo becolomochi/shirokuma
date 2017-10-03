@@ -30,9 +30,9 @@
             <div class="common-text">
               <h2 class="profile-title">べこ beco</h2>
               <ul class="profile-lists top-profile-lists">
-              <li>DTP6年。うち、後半3年は WordPress サイトの設定・コーディング</li>
-              <li>転職（正確には部署異動）Webデザイン・コーダー3年</li>
-              <li>京都造形芸術大学 通信教育部 情報デザインコース卒業</li>
+              <li>Webデザイン・コーダー3年</li>
+              <li>学ぶことや作ることが好きです。</li>
+              <li>田舎産まれ・田舎暮らし。</li>
               </ul>
               <p class="profile-more-link"><router-link to="/about">くわしく見る</router-link></p>
             </div>
@@ -88,7 +88,7 @@
   }
   &.about-box {
     margin-top: 200px;
-    padding-bottom: 200px;
+    padding-bottom: 140px;
     background-color: #ffeec9;
     &:before {
       background:url(../assets/img/title_bg_about.svg) repeat-x;
