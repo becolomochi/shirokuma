@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="header-outer">
+    <div class="header-outer" id="sticky">
       <header>
         <h1 class="site-title"><router-link to="/">becolomochi's portfolio</router-link></h1>
       </header>
@@ -30,6 +30,21 @@
       return {
         myData: myData
       }
+    },
+    mounted: function() {
+      $(window).on('scroll', function() {
+        if($(this).scrollTop() > 400) {
+          $('#sticky').addClass('is-true');
+        } else {
+          $('#sticky').removeClass('is-true');
+        }
+      })
     }
   }
 </script>
+
+<style lang="scss">
+  .is-true {
+    background: rgba(255,255,255, 0.8);
+  }
+</style>

@@ -125,6 +125,7 @@ a {
   margin-bottom: 20px;
   text-align: center;
   font-size: 2.0rem;
+  tranition: 1s;
   a {
     color: $c-text;
     &:hover, &.hover {
@@ -140,6 +141,19 @@ a {
     &:hover, &.hover {
       text-decoration: none;
       border-bottom-color: currentColor;
+    }
+  }
+}
+@media (max-width: $b-medium-max) {
+  .header-nav {
+    li {
+      padding-bottom: 10px;
+    }
+  }
+  .is-true {
+    .site-title {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
     }
   }
 }
@@ -223,8 +237,8 @@ nav, footer {
 /** Common more box */
 .common-more-box {
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 1em;
+  margin-top: 30px;
+  margin-bottom: 15px;
   .more-link {
     display: block;
     max-width: 300px;
@@ -254,23 +268,24 @@ nav, footer {
 }
 
 /** Pickup */
-.pickup-box-inner::after {
-  content: '';
-  display: block;
-  clear: both;
+.pickup-box-inner{
+  width: $b-large-min;
+  margin: 0 auto;
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 
 .pickup-box {
   background-color: #fff;
-  width: 35%;
+  width: 360px;
   float: left;
   margin-top: 10px;
-  margin-left: 10%;
-  margin-right: 5%;
   padding: 16px;
   & + .pickup-box {
-    margin-left: 5%;
-    margin-right: 10%;
+    margin-left: 49px;
   }
 }
 .pickup-box-outer {
@@ -286,6 +301,9 @@ nav, footer {
     margin-left: 0;
     margin-right: 0;
   }
+  .pickup-box-inner {
+    width: 100%;
+  }
   .pickup-box {
     max-width: 480px;
     width: 90%;
@@ -293,9 +311,8 @@ nav, footer {
     margin-left: auto;
     margin-right: auto;
     & + .pickup-box {
-      margin-top: 60px;
+      margin-top: 30px;
       margin-left: auto;
-      margin-right: auto;
     }
   }
 }
@@ -304,6 +321,11 @@ nav, footer {
   margin-left: -16px;
   margin-right: -16px;
   height: 180px;
+  filter: sepia(30%);
+  transition: filter 0.3s;
+  &:hover, .hover {
+    filter: sepia(0);
+  }
 }
 @media (max-width: $b-small-max) {
   .pickup-image-box {
@@ -452,4 +474,9 @@ $width: 800px;
   bottom: 0;
   left: calc(50% - #{$width} / 2);
   max-width: $width;
+}
+@media (max-width: 800px) {
+  .img-top-catch {
+    left: 0;
+  }
 }
