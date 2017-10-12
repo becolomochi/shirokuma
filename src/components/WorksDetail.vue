@@ -3,7 +3,7 @@
     <nav class="breadcrumb-nav">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/product">Product</router-link></li>
+        <li><router-link to="/works">Works</router-link></li>
       </ul>
     </nav>
     <article class="product-box">
@@ -47,7 +47,7 @@
     },
     computed: {
       filteredData: function () {
-        var url = window.location.protocol+ '//' + window.location.host + '/product/'
+        var url = window.location.protocol+ '//' + window.location.host + '/works/'
         var matchData = this.myData.filter(function(item, index){
           if (item.slug === window.location.href.replace(url, '')) return true;
         })

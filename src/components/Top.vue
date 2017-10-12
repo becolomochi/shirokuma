@@ -9,7 +9,7 @@
           <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
             <router-link :to="'/works/' + d.slug"><img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image"></router-link>
           </div>
-          <h1 class="pickup-title" v-cloak><router-link :to="'/product/' + d.slug">{{ d.title }}</router-link></h1>
+          <h1 class="pickup-title" v-cloak><router-link :to="'/works/' + d.slug">{{ d.title }}</router-link></h1>
         </article>
       </div>
       <div class="common-more-box">
