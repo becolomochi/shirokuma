@@ -15,11 +15,6 @@
       <p class="product-year" v-cloak>制作年：{{ filteredData.year }}</p>
       <p class="" v-cloak>{{ filteredData.role }}</p>
       <p class="" v-cloak><a :href="filteredData.url" target="_blank">{{ filteredData.urlTitle }}</a></p>
-      <div class="product-tags">
-        <ul>
-          <li v-for="t in filteredData.tags"><a href="#" class="tag" v-cloak>{{ t }}</a></li>
-        </ul>
-      </div>
       <div v-for="p in filteredData.picture" v-if="p.id !== '1'">
         <img :src="p.path" width="" height="" alt="" class="product-image">
       </div>
