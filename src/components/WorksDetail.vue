@@ -23,13 +23,8 @@
 </template>
 
 <script>
-  import myData from '../../static/data.json'
   export default {
-    data () {
-      return {
-        myData: myData
-      }
-    },
+    props: ['data'],
     mounted() {
       document.title = this.filteredData.title + '- becolomochi\'s portfolio'
 
@@ -43,7 +38,7 @@
     computed: {
       filteredData: function () {
         var url = window.location.protocol+ '//' + window.location.host + '/works/'
-        var matchData = this.myData.filter(function(item, index){
+        var matchData = this.data.filter(function(item, index){
           if (item.slug === window.location.href.replace(url, '')) return true;
         })
         return matchData[0]
