@@ -2,17 +2,19 @@
   <div class="wrapper">
     <main>
       <transition name="fade">
-        <router-view></router-view>
+        <router-view :data="myData"></router-view>
       </transition>
     </main>
   </div>
 </template>
 
 <script>
-  import Child from '@/components/parts/WorksList'
+  import myData from '../../../static/data.json'
   export default {
-    components: {
-      productList: Child
+    data () {
+      return {
+        myData: myData
+      }
     }
   }
 </script>
