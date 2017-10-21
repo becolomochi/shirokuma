@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@import '../lib/font-awesome/scss/font-awesome';
 @import '_reset.css';
 
 /** Variables */
@@ -443,9 +444,15 @@ nav, footer {
 }
 .sns-box {
   margin-top: 20px;
+  text-align: center;
 }
 .sns-link {
   margin: 0 5px;
+  font-size: 30px;
+  color: #666;
+  &:hover {
+    color: #444;
+  }
 }
 
 /** top wrapper header */

@@ -10,6 +10,11 @@
       <router-view :data="myData"></router-view>
     </transition>
     <fnav></fnav>
+    <div class="sns-box">
+      <a href="https://twitter.com/becolomochi" target="_blank" class="sns-link"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/becolomochi" target="_blank" class="sns-link"><i class="fa fa-github"></i></a>
+      <a href="https://becolomochi.tumblr.com" target="_blank" class="sns-link"><i class="fa fa-tumblr"></i></a>
+    </div>
     <footer>
       <div class="copyright-box">© 2017 beco</div>
     </footer>
