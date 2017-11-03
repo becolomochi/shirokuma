@@ -1,38 +1,28 @@
-<template>
-  <div class="wrapper">
-    <main>
-      <form action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec" class="form-box">
-        <input name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA">
-        <input name="SHEET_NAME" type="hidden" value="フォームデータ">
+<template lang="pug">
+  .wrapper
+    main
+      form(action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec").form-box
+        input(name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA")
+        input(name="SHEET_NAME" type="hidden" value="フォームデータ")
 
-        <h1>Contact お問い合わせ</h1>
+        h1 Contact お問い合わせ
 
-        <div class="form-item-box">
-          <label class="control-label">Mail</label>
-          <div class="">
-            <input type="email" class="form-control" name="your-email" placeholder="your@email.com">
-          </div>
-        </div>
-        <div class="form-item-box">
-          <label class="control-label">お名前</label>
-          <div class="">
-            <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-          </div>
-        </div>
-        <div class="form-item-box">
-          <label class="control-label">メッセージ <span class="label-required">必須</span></label>
-          <div class="">
-            <textarea class="form-control" name="your-message" placeholder="Message" rows="8" required id="message"></textarea>
-          </div>
-        </div>
-        <div class="form-item-box">
-          <div class="form-button-box">
-            <button class="form-button" type="submit" v-on:click="sendMessage()">Submit</button>
-          </div>
-        </div>
-      </form>
-    </main>
-  </div>
+        .form-item-box
+          label.control-label Mail
+          div
+            input(type="email" name="your-email" placeholder="your@email.com").form-control
+        .form-item-box
+          label.control-label お名前
+          div
+            input(type="text" name="your-name" placeholder="Your Name").form-control
+        .form-item-box
+          label.control-label メッセージ
+            span.label-required 必須
+          div
+            textarea(name="your-message" placeholder="Message" rows="8" required)#message.form-control
+        .form-item-box
+          .form-button-box
+            button(type="submit" v-on:click="sendMessage()").form-button Submit
 </template>
 
 <script>
@@ -43,8 +33,8 @@
       sendMessage() {
         var form = $('form');
         var submitBtn = form.find('button[type=submit]');
-        if(getElementById("message") ==="") {
-          alert("メッセージを入力してください");
+        if(getElementById('message') === '') {
+          alert('メッセージを入力してください');
           return false;
         }
         $.ajax({

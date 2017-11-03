@@ -1,17 +1,15 @@
-<template>
-  <div>
-    <h1>Works 作品紹介</h1>
-    <article class="product-box" v-for="d in data">
-      <div v-for="p in d.picture" v-if="p.id === '1'" class="product-image-box common-thumb-box">
-        <router-link :to="'/works/' + d.slug"><img :src="p.path" width="" height="" alt="" class="common-thumb-image"></router-link>
-      </div>
-      <div class="product-content-box">
-        <h1 class="product-title" v-cloak><router-link :to="'/works/' + d.slug">{{ d.title }}</router-link></h1>
-        <p class="product-description" v-cloak>{{ d.text }}</p>
-        <p class="product-year" v-cloak>制作年：{{ d.year }}</p>
-      </div>
-    </article>
-  </div>
+<template lang="pug">
+  div
+    h1 Works 作品紹介
+    article(v-for="d in data").product-box
+      div(v-for="p in d.picture" v-if="p.id === '1'").product-image-box.common-thumb-box
+        router-link(:to="'/works/' + d.slug")
+          img(:src="p.path" width="" height="" alt="").common-thumb-image
+      div.product-content-box
+        h1(v-cloak).product-title
+          router-link(:to="'/works/' + d.slug") {{ d.title }}
+        p(v-cloak).product-description {{ d.text }}
+        p(v-cloak).product-year 制作年：{{ d.year }}
 </template>
 
 <script>
