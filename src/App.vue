@@ -1,24 +1,22 @@
-<template>
-  <div id="app">
-    <div class="header-outer" id="sticky">
-      <header>
-        <h1 class="site-title"><router-link to="/">becolomochi's portfolio</router-link></h1>
-      </header>
-      <hnav></hnav>
-    </div>
-    <transition name="fade">
-      <router-view :data="myData"></router-view>
-    </transition>
-    <fnav></fnav>
-    <div class="sns-box">
-      <a href="https://twitter.com/becolomochi" target="_blank" class="sns-link"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/becolomochi" target="_blank" class="sns-link"><i class="fa fa-github"></i></a>
-      <a href="https://becolomochi.tumblr.com" target="_blank" class="sns-link"><i class="fa fa-tumblr"></i></a>
-    </div>
-    <footer>
-      <div class="copyright-box">© 2017 beco</div>
-    </footer>
-  </div>
+<template lang="pug">
+  #app
+    .header-outer#sticky
+      header
+        h1.site-title
+          router-link(to="/") becolomochi's portfolio
+      hnav
+    transition(name="fade")
+      router-view(:data="myData")
+    fnav
+    .sns-box
+      a(href="https://twitter.com/becolomochi" target="_blank").sns-link
+        i.fa.fa-twitter
+      a(href="https://github.com/becolomochi" target="_blank").sns-link
+        i.fa.fa-github
+      a(href="https://becolomochi.tumblr.com" target="_blank").sns-link
+        i.fa.fa-tumblr
+    footer
+      .copyright-box © 2017 beco
 </template>
 
 <script>

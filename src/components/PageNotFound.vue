@@ -1,9 +1,7 @@
-<template>
-  <div class="wrapper">
-    <main>
-      <h1>ページが見つかりません</h1>
-    </main>
-  </div>
+<template lang="pug">
+  .wrapper
+    main
+      h1 ページが見つかりません
 </template>
 
 <script>

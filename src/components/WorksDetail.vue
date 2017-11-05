@@ -1,25 +1,22 @@
-<template>
-  <div>
-    <nav class="breadcrumb-nav">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/works">Works</router-link></li>
-      </ul>
-    </nav>
-    <article class="product-box">
-      <h1 class="product-title" v-cloak>{{ filteredData.title }}</h1>
-      <div v-for="p in filteredData.picture" v-if="p.id === '1'">
-        <img :src="p.path" width="" height="" alt="" class="product-image">
-      </div>
-      <p class="product-description" v-cloak>{{ filteredData.text }}</p>
-      <p class="product-year" v-cloak>制作年：{{ filteredData.year }}</p>
-      <p class="" v-cloak>{{ filteredData.role }}</p>
-      <p class="" v-cloak><a :href="filteredData.url" target="_blank">{{ filteredData.urlTitle }}</a></p>
-      <div v-for="p in filteredData.picture" v-if="p.id !== '1'">
-        <img :src="p.path" width="" height="" alt="" class="product-image">
-      </div>
-    </article>
-  </div>
+<template lang="pug">
+  div
+    nav.breadcrumb-nav
+      ul
+        li
+          router-link(to="/") Home
+        li
+          router-link(to="/works") Works
+    article.product-box
+      h1(v-cloak).product-title {{ filteredData.title }}
+      div(v-for="p in filteredData.picture" v-if="p.id === '1'")
+        img(:src="p.path" width="" height="" alt="").product-image
+      p(v-cloak).product-description {{ filteredData.text }}
+      p(v-cloak).product-year 制作年：{{ filteredData.year }}
+      p(v-cloak) {{ filteredData.role }}
+      p(v-cloak)
+        a(:href="filteredData.url" target="_blank") {{ filteredData.urlTitle }}
+      div(v-for="p in filteredData.picture" v-if="p.id !== '1'")
+        img(:src="p.path" width="" height="" alt="").product-image
 </template>
 
 <script>

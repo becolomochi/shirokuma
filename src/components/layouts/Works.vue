@@ -1,11 +1,8 @@
-<template>
-  <div class="wrapper">
-    <main>
-      <transition name="fade">
-        <router-view :data="myData"></router-view>
-      </transition>
-    </main>
-  </div>
+<template lang="pug">
+  .wrapper
+    main
+      transition(name="fade")
+        router-view(:data="myData")
 </template>
 
 <script>
