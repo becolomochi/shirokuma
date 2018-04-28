@@ -1,59 +1,47 @@
-<template>
-  <div class="top">
-    <div class="top-wrapper-header">
-      <img src="../assets/img/img_top_catch.svg" alt="暖かくて優しいしなやかなコミュニケーションを" class="img-top-catch">
-    </div>
-    <section class="pickup-box-outer">
-      <div class="pickup-box-inner">
-        <article class="pickup-box" v-for="d in data">
-          <div class="pickup-image-box common-thumb-box" v-for="p in d.picture" v-if="p.id === '1'">
-            <router-link :to="'/works/' + d.slug"><img :src="p.path" width="" height="" alt="" class="pickup-image common-thumb-image"></router-link>
-          </div>
-          <h1 class="pickup-title" v-cloak><router-link :to="'/works/' + d.slug">{{ d.title }}</router-link></h1>
-        </article>
-      </div>
-      <div class="common-more-box">
-        <router-link to="/works" class="more-link">もっと見る</router-link>
-      </div>
-    </section>
+<template lang="pug">
+  .top
+    .top-wrapper-header
+      img(src="../assets/img/img_top_catch.svg" alt="あたたかくて やさしい、しなやかなコミュニケーションを").img-top-catch
+    section.pickup-box-outer
+      .pickup-box-inner
+        article(v-for="d in data").pickup-box
+          .pickup-image-box.common-thumb-box(v-for="p in d.picture" v-if="p.id === '1'")
+            router-link(:to="'/works/' + d.slug")
+              img.pickup-image.common-thumb-image(:src="p.path" width="" height="" alt="")
+          h1.pickup-title(v-cloak)
+            router-link(:to="'/works/' + d.slug") {{ d.title }}
+      .common-more-box
+        router-link.more-link(to="/works") もっと見る
 
-    <article class="common-box-outer about-box">
-      <div class="common-box-inner">
-        <h2 class="common-content-title"><img src="../assets/img/title_img_about.svg" alt="about" class="common-content-title" width="258"></h2>
-        <div class="about-content-box">
-          <h1 class="common-article-title">About becolomochi</h1>
-          <div class="top-profile-box">
-            <div class="profile-thumb-box">
-              <img src="../assets/img/icon1.png" width="120" height="120" alt="icon1" class="about-image">
-              <img src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1" class="about-image">
-            </div>
-            <div class="common-text">
-              <h2 class="profile-title">べこ beco</h2>
-              <ul class="profile-lists top-profile-lists">
-              <li>Front-end developer</li>
-              <li>Illustrator</li>
-              <li>学ぶことや作ることが好きです。</li>
-              <li>田舎生まれ・田舎暮らし。</li>
-              </ul>
-              <p class="profile-more-link"><router-link to="/about">くわしく見る</router-link></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+    article.common-box-outer.about-box
+      .common-box-inner
+        h2.common-content-title
+          img.common-content-title(src="../assets/img/title_img_about.svg" alt="about" width="258")
+        .about-content-box
+          h1.common-article-title About becolomochi
+          .top-profile-box
+            .profile-thumb-box
+              img.about-image(src="../assets/img/icon1.png" width="120" height="120" alt="icon1")
+              img.about-image(src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1")
+            .common-text
+              h2.profile-title べこ beco
+              ul.profile-lists.top-profile-lists
+                li Front-end developer
+                li Illustrator
+                li 学ぶことや作ることが好きです。
+                li 田舎生まれ・田舎暮らし。
+              p.profile-more-link
+                router-link(to="/about") くわしく見る
 
-    <article class="common-box-outer contact-box">
-      <div class="common-box-inner">
-        <h2 class="common-content-title contact-content-title"><img src="../assets/img/title_img_contact.svg" alt="contact" class="common-content-title" width="214"></h2>
-        <div class="contact-content-box">
-          <h1 class="common-article-title">お問い合わせ</h1>
-          <div class="common-text top-contact-box">
-            <p><router-link to="/contact" class="top-contact-link">お問い合わせフォーム</router-link></p>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
+    article.common-box-outer.contact-box
+      .common-box-inner
+        h2.common-content-title.contact-content-title
+          img.common-content-title(src="../assets/img/title_img_contact.svg" alt="contact" width="214")
+        .contact-content-box
+          h1.common-article-title お問い合わせ
+          .common-text.top-contact-box
+            p
+              router-link.top-contact-link(to="/contact") お問い合わせフォーム
 </template>
 
 <script>
