@@ -30,9 +30,10 @@
             <div class="common-text">
               <h2 class="profile-title">べこ beco</h2>
               <ul class="profile-lists top-profile-lists">
-              <li>Webデザイン・コーダー3年</li>
+              <li>Front-end developer</li>
+              <li>Illustrator</li>
               <li>学ぶことや作ることが好きです。</li>
-              <li>田舎産まれ・田舎暮らし。</li>
+              <li>田舎生まれ・田舎暮らし。</li>
               </ul>
               <p class="profile-more-link"><router-link to="/about">くわしく見る</router-link></p>
             </div>
