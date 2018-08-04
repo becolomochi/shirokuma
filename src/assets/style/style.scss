@@ -465,9 +465,7 @@ nav, footer {
 .top-wrapper-header {
   position: relative;
   height: 400px;
-  background-image: linear-gradient(to bottom right, #f1f6fb, #c4ddfa, #ffeec9, #fabcb1, #ffeec9, #c4ddfa, #f1f6fb);
-  background-size: 1000%;
-  animation: bgGradient 60s linear infinite forwards;
+  background: linear-gradient(135deg, #ffedad 0%, #f5a070 100%);
 }
 
 @media (max-width: $b-small-max) {
