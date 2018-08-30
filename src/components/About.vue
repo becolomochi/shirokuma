@@ -8,6 +8,19 @@
         img(src="../assets/img/icon1.png" width="120" height="120" alt="icon1").about-image
         img(src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1").about-image
 
+      p.profile-paragraph Front-end developer / Character creator
+
+      h3 できること
+
+      ul.profile-lists
+        li HTML5/CSS3/JavaScript
+        li プログラミングの基礎
+        li ターミナル操作
+        li 
+          a(href="https://twitter.com/becolomochi/status/1021660801982029824") キャラクター制作
+        li Adobe Illustrator を使ったイラストやロゴの作成
+        li 紙面レイアウト
+
       h3 経歴
 
       ul.profile-lists
@@ -16,15 +29,7 @@
         li システムの UI 改修、LP のデザイン・コーディング、ロゴデザインなどをしていました。
         li 京都造形芸術大学 通信教育部 情報デザインコース卒業
         li 2018年4月〜 フリーランス（屋号：べころもち工房）
-
-      h3 できること
-
-      ul.profile-lists
-        li HTML5/CSS3/JavaScript
-        li プログラミングの基礎
-        li ターミナル操作
-        li Adobe Illustratorを使ったイラストやロゴの作成
-        li 紙面レイアウト
+        li 子育て中につき作業は夜に行っています。Slackやメールについては日中も随時対応可能です。
 
       h3 仕事観
 
@@ -32,10 +37,41 @@
         li 「あたたかくて やさしい、しなやかなコミュニケーションを」をモットーとしています。
         li 会社員をしながら大学の制作課題をこなしていたこともあり、スケジュールにあわせた作業進行が得意です。
         li 課題に対してどう改善するかを考えて行動することができます。
-        li 情報収集は欠かしません（はてブのテクノロジーカテゴリ・Twitter）
+        li 情報収集を毎日欠かさず行っています。
         li Webサービスが好きで、特にSlackのテキスト／Emojiコミュニケーションが好きです。
         li 本をおすすめされればわりとすぐ買ってしまうほうです。
         li 少人数のチームで実力を出しやすいです。
+
+      h3 関連リンク
+
+      ul.profile-lists
+        li
+          a(href="https://booth.pm/ja/items/667217") BOOTH Vue.jsでポートフォリオサイト制作記
+          br
+          | このポートフォリオサイトの作り方について書いた技術系同人誌です
+        li
+          a(href="https://becolomochi.tumblr.com") Tumblr
+          br
+          | イラストやグッズの紹介など
+        li
+          a(href="https://becolomochi.hatenablog.com") ブログ
+        li
+          a(href="https://scrapbox.io/becolomochi") Scrapbox
+        li
+          a(href="https://github.com/becolomochi") GitHub
+        li
+          a(href="https://twitter.com/becolomochi") Twitter
+        li
+          a(href="https://www.instagram.com/becolomochi") Instagram
+        li
+          a(href="http://booklog.jp/users/becolomochi") Booklog
+        li
+          a(href="http://qiita.com/becolomochi") Qiita
+        li
+          a(href="https://suzuri.jp/becolomochi") グッズ販売
+        li
+          a(href="https://store.line.me/stickershop/product/1018430") LINEスタンプ
+        
 
       h3 性格
 
