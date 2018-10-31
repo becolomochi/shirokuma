@@ -41,38 +41,36 @@ body {
   font-size: 1.6rem;
   line-height: 1.8;
 }
-@media (max-width: $b-small-max) {
-  body {
-    font-size: 1.4rem;
-    line-height: 1.6;
-  }
-}
+
 h1,h2,h3,h4,h5,h6 {
   line-height: 1.4;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 h1 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
 }
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.8rem;
 }
 h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 h4 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 h5 {
   font-size: 1.4rem;
+  font-weight: bold;
 }
 h6 {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 /** Link */
 a {
@@ -121,12 +119,13 @@ a {
   left: 0;
   right: 0;
   z-index: 9999;
+  background: rgba(255,255,255, 0.8);
 }
 .site-title {
   margin-bottom: 20px;
   text-align: center;
   font-size: 2.0rem;
-  tranition: 1s;
+  transition: 1s;
   a {
     color: $c-text;
     &:hover, &.hover {
@@ -262,10 +261,6 @@ nav, footer {
   list-style: circle;
   list-style-position: outside;
   margin-left: 30px;
-  font-size: 1.4rem;
-}
-.profile-paragraph {
-  font-size: 1.4rem;
 }
 
 /** Pickup */

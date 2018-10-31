@@ -80,7 +80,7 @@
     }
     .common-content-title {
       position: absolute;
-      top: -53px;
+      top: -68px;
       z-index: -1;
     }
   }
@@ -92,7 +92,7 @@
     }
     .common-content-title {
       position: absolute;
-      top: -63px;
+      top: -83px;
       z-index: -1;
     }
   }

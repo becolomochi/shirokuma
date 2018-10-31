@@ -17,23 +17,37 @@
         li プログラミングの基礎
         li ターミナル操作
         li 
-          a(href="https://twitter.com/becolomochi/status/1021660801982029824") キャラクター制作
+          a(href="https://twitter.com/becolomochi/status/1021660801982029824" target="_blank") キャラクター制作
         li Adobe Illustrator を使ったイラストやロゴの作成
         li 紙面レイアウト
 
       h3 経歴
 
+      h4 2018年
+
       ul.profile-lists
-        li DTP6年。うち、後半3年はWordPressサイトの設定・コーディングも担当
-        li 転職（正確には部署異動）Webデザイン・コーダー3年
-        li システムの UI 改修、LP のデザイン・コーディング、ロゴデザインなどをしていました。
-        li 京都造形芸術大学 通信教育部 情報デザインコース卒業
         li 2018年4月〜 フリーランス（屋号：べころもち工房）
-        li 子育て中につき作業は夜に行っています。Slackやメールについては日中も随時対応可能です。
+        li
+          a(href="https://creive.me/" target="_blank") creive【クリーブ】
+          | さんにて記事公開
+        li
+          a(href="https://twitter.com/becolomochi/status/1021660801982029824" target="_blank") キャラクター制作
+        li アイコン作成
+        li 
+          a(href="http://amzn.asia/d/i9PEPqs" target="_blank") ゼロからわかる Ruby 超入門（技術評論社）イラスト作成
+
+      h4 〜2017年
+
+      ul.profile-lists
+        li DTP6年。うち、後半3年はWordPressサイトの設定・コーディング
+        li 転職（正確には部署異動）Webデザイン・コーダー3年
+        li システムの UI 改修、LP のデザイン・コーディング、ロゴデザインなどを担当
+        li 京都造形芸術大学 通信教育部 情報デザインコース卒業
 
       h3 仕事観
 
       ul.profile-lists
+        li 子育て中につき作業は夜に行っています。Slackやメールについては日中も随時対応可能です。
         li 「あたたかくて やさしい、しなやかなコミュニケーションを」をモットーとしています。
         li 会社員をしながら大学の制作課題をこなしていたこともあり、スケジュールにあわせた作業進行が得意です。
         li 課題に対してどう改善するかを考えて行動することができます。

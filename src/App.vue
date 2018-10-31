@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    .header-outer#sticky
+    .header-outer
       header
         h1.site-title
           router-link(to="/") becolomochi's portfolio
@@ -33,21 +33,6 @@
       return {
         myData: myData
       }
-    },
-    mounted: function() {
-      $(window).on('scroll', function() {
-        if($(this).scrollTop() > 400) {
-          $('#sticky').addClass('is-true');
-        } else {
-          $('#sticky').removeClass('is-true');
-        }
-      })
     }
   }
 </script>
-
-<style lang="scss">
-  .is-true {
-    background: rgba(255,255,255, 0.8);
-  }
-</style>
