@@ -2,9 +2,11 @@
 
 > A Vue.js project
 
+[Vue.js でポートフォリオサイト制作記](https://booth.pm/ja/items/667217) という技術系同人誌で解説したサイトのリポジトリです。
+
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
