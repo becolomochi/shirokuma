@@ -7,8 +7,8 @@
 
 ## 変更履歴
 
-- 2019-01-08 アップロード先をレンタルサーバーから Netlify に引っ越し
-- 2017-11-05 template 内を Pug で記述
+- 2019-01-08 アップロード先をレンタルサーバーから Netlify に引っ越し。[作業内容の記事](https://becolomochi.hatenablog.com/entry/2019/01/08/233027)
+- 2017-11-05 template 内を Pug で記述。[作業内容の記事](https://becolomochi.hatenablog.com/entry/2017/11/05/234922)
 
 ## Build Setup
 
