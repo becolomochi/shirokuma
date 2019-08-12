@@ -1,0 +1,101 @@
+/** common */
+.common-tags {
+  li {
+    display: inline-block;
+    font-size: 1.2rem;
+    & +li {
+      margin-left: 6px;
+    }
+  }
+}
+
+.common-thumb-box {
+  position: relative;
+  overflow: hidden;
+}
+.common-thumb-image {
+  display: block;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-60%, -55%);
+  width: 120%;
+  height: auto;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/** Common more box */
+.common-more-box {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  .more-link {
+    display: block;
+    max-width: 300px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5em;
+    border: 1px solid CurrentColor;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    &:hover, &.hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: $c-link;
+    }
+  }
+}
+
+/** common contents */
+.common-box-inner {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width: $b-small-max) {
+  .common-box-inner {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.about-content-box,
+.contact-content-box {
+  position: relative;
+  margin-top: -13px;
+  width: 100%;
+  &:before {
+    position: absolute;
+    top: -20px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px;
+  }
+}
+
+.about-content-box {
+  padding-bottom: 50px;
+}
+
+.contact-content-box {
+  padding-bottom: 50px;
+}
+
+.common-article-title {
+  margin-top: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}

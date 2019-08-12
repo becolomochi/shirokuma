@@ -1,10 +1,10 @@
 <template lang="pug">
   #app
     .header-outer
-      header
-        h1.site-title
-          router-link(to="/") becolomochi's portfolio
-      hnav
+      header.header
+        h1.header_title
+          router-link(to="/").header_title-link becolomochi's portfolio
+        hnav
     transition(name="fade")
       router-view(:data="myData")
     fnav
