@@ -6,17 +6,17 @@
           router-link(to="/") Home
         li
           router-link(to="/works") Works
-    article.product-box
-      h1(v-cloak).product-title {{ filteredData.title }}
+    article.product_box
+      h1(v-cloak).product_title {{ filteredData.title }}
       div(v-for="p in filteredData.picture" v-if="p.id === '1'")
-        img(:src="p.path" width="" height="" alt="").product-image
-      p(v-cloak).product-description {{ filteredData.text }}
-      p(v-cloak).product-year 制作年：{{ filteredData.year }}
+        img(:src="p.path" width="" height="" alt="").product_image
+      p(v-cloak).product_description {{ filteredData.text }}
+      p(v-cloak).product_year 制作年：{{ filteredData.year }}
       p(v-cloak) {{ filteredData.role }}
       p(v-cloak)
         a(:href="filteredData.url" target="_blank") {{ filteredData.urlTitle }}
       div(v-for="p in filteredData.picture" v-if="p.id !== '1'")
-        img(:src="p.path" width="" height="" alt="").product-image
+        img(:src="p.path" width="" height="" alt="").product_image
 </template>
 
 <script>

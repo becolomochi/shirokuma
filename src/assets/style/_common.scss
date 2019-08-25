@@ -1,5 +1,5 @@
 /** common */
-.common-tags {
+.common_tags {
   li {
     display: inline-block;
     font-size: 1.2rem;
@@ -9,11 +9,11 @@
   }
 }
 
-.common-thumb-box {
+.common_thumb-box {
   position: relative;
   overflow: hidden;
 }
-.common-thumb-image {
+.common_thumb-image {
   display: block;
   position: absolute;
   top: 60%;
@@ -23,17 +23,17 @@
   height: auto;
 }
 
-.product-image {
+.product_image {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
 /** Common more box */
-.common-more-box {
+.common_more-box {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 60px;
+  margin-bottom: 30px;
   .more-link {
     display: block;
     max-width: 300px;
@@ -52,27 +52,17 @@
 }
 
 /** common contents */
-.common-box-inner {
+.common_box-inner {
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-@media (max-width: $b-small-max) {
-  .common-box-inner {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+  margin: 0 auto;
+  padding: 60px;
+  @media (max-width: $b-small-max) {
+    padding: 30px 20px;
   }
 }
 
-.about-content-box,
-.contact-content-box {
+.about_content-box,
+.contact_content-box {
   position: relative;
   margin-top: -13px;
   width: 100%;
@@ -86,15 +76,15 @@
   }
 }
 
-.about-content-box {
+.about_content-box {
   padding-bottom: 50px;
 }
 
-.contact-content-box {
+.contact_content-box {
   padding-bottom: 50px;
 }
 
-.common-article-title {
+.common_article-title {
   margin-top: 0;
   font-size: 1.4rem;
   font-weight: bold;

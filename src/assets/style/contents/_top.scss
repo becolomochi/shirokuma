@@ -32,10 +32,10 @@ $width: 800px;
 }
 
 .top_box {
-  &.about-box {
+  &.about_box {
     background-color: $bg-color2;
   }
-  &.contact-box {
+  &.contact_box {
     background-color: $bg-color3;
   }
 }
@@ -45,4 +45,17 @@ $width: 800px;
   text-align: center;
   margin-top: 32px;
   margin-bottom: 32px;
+}
+
+.top_pickup_box-outer {
+  max-width: 1200px;
+  margin: 100px auto;
+}
+
+.top_pickup_box-inner {
+  width: $b-large-min;
+  margin: 0 auto;
+  @media (max-width: $b-medium-max) {
+    width: 100%;
+  }
 }
