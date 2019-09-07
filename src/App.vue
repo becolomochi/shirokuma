@@ -1,12 +1,13 @@
 <template lang="pug">
   #app
-    .header-outer
-      header.header
+    header.header
+      .header_inner
         h1.header_title
           router-link(to="/").header_title-link becolomochi's portfolio
         hnav
-    transition(name="fade")
-      router-view(:data="myData")
+    main.main
+      transition(name="fade")
+        router-view(:data="myData")
     footer.footer
       fnav
       .footer_copyright © 2017-2019 beco

@@ -1,6 +1,6 @@
 <template lang="pug">
-  div
-    h1 Works 作品紹介
+  .page
+    h1.page_headline Works 作品紹介
     article(v-for="d in data").product_box
       div(v-for="p in d.picture" v-if="p.id === '1'").product_image-box.common_thumb
         router-link(:to="'/works/' + d.slug")

@@ -1,7 +1,7 @@
 <template lang="pug">
   .wrapper
     main
-      h1 ページが見つかりません
+      h1.page_headline ページが見つかりません
 </template>
 
 <script>

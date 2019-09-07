@@ -68,14 +68,19 @@ h6 {
 h1,
 h2 {
   line-height: 1.4;
-  margin: 0.5em 0;
+  margin: 2em 0 0.5em;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  margin: 0.5em 0;
+  margin: 1em 0 0.5em;
+}
+
+.with-border {
+  padding-bottom: 4px;
+  border-bottom: 1px solid $line-color;
 }
 
 /* ----------------------------------------------------------

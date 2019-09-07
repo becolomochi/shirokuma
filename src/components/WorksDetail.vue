@@ -7,7 +7,7 @@
         li
           router-link(to="/works") Works
     article.product_box
-      h1(v-cloak).product_title {{ filteredData.title }}
+      h1.page_headline(v-cloak).product_title {{ filteredData.title }}
       div(v-for="p in filteredData.picture" v-if="p.id === '1'")
         img(:src="p.path" width="" height="" alt="").product_image
       p(v-cloak).product_description {{ filteredData.text }}

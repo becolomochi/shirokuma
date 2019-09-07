@@ -1,11 +1,10 @@
 <template lang="pug">
-  .wrapper
-    main
+  .page
       form(action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec").form-box
         input(name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA")
         input(name="SHEET_NAME" type="hidden" value="フォームデータ")
 
-        h1 Contact お問い合わせ
+        h1.page_headline Contact お問い合わせ
 
         .form-item-box
           label.control-label Mail
@@ -95,6 +94,7 @@
     padding: 10px;
     background-color: #fff;
     box-shadow: 0 2px 0 #ddd;
+    color: #444;
     &:hover {
       background-color: #f7f7f7;
     }
