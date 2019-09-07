@@ -1,0 +1,110 @@
+/* ----------------------------------------------------------
+/* form
+/* フォーム周りのスタイル
+/* ---------------------------------------------------------- */
+
+.form {
+  margin: 1em 0;
+}
+
+label {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.form__label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $text-color;
+  outline: none;
+  &:disabled {
+    color: #bbb !important;
+    background-color: #eee !important;
+    cursor: not-allowed;
+    &:hover {
+      color: #bbb !important;
+      background-color: #eee !important;
+    }
+  }
+}
+
+input:not([type="file"]),
+input:not([type="button"]),
+input:not([type="submit"]),
+input:not([type="reset"]),
+input:not([type="checkbox"]),
+input:not([type="radio"]),
+textarea,
+select {
+  border: 1px solid $line-color;
+  background-color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  &:hover {
+    background-color: $thin-gray;
+  }
+  &:focus {
+    border-color: darken($line-color, 10%);
+    background-color: #fff;
+  }
+}
+
+select,
+input[type="file"] {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+select {
+  padding-right: 24px;
+  background: url(/img/select.svg) no-repeat right;
+}
+
+.wide,
+textarea {
+  width: 100%;
+  // width: 500px;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  position: relative;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: $main-color;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &:hover {
+    background-color: desaturate($main-color, 5%);
+  }
+  &:focus {
+    top: 1px;
+    background: $main-color;
+    outline: 5px auto saturate($main-color, 20%);
+    outline-offset: -2px;
+  }
+}
+
+input[type="file"] {
+  font-size: 1.3rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form__checkbox
+.form__radio {
+  cursor: pointer;
+}

@@ -1,13 +1,23 @@
 @charset 'utf-8';
 @import 'ress';
+
 @import '../lib/font-awesome/scss/font-awesome';
+
 @import 'variables';
-@import 'text';
+@import 'mixin';
+
+@import 'common/common';
+@import 'common/text';
+@import 'common/form';
+
 @import 'fade';
-@import 'common';
-@import 'box';
-@import 'header';
-@import 'footer';
+
+@import 'block/common';
+@import 'block/box';
+@import 'block/header';
+@import 'block/nav';
+@import 'block/footer';
+
 @import 'contents/top';
 @import 'contents/profile';
 @import 'contents/pickup';

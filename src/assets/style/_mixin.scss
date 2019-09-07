@@ -1,0 +1,47 @@
+/* ----------------------------------------------------------
+/* media query
+/* ---------------------------------------------------------- */
+@mixin mq {
+  @media (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin mq-min {
+  @media (min-width: $content-size) {
+    @content;
+  }
+}
+
+/* ----------------------------------------------------------
+/* media query
+/* ---------------------------------------------------------- */
+@mixin resolution2x {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx){
+    @content;
+  }
+}
+
+/* ----------------------------------------------------------
+/* placeholder
+/* ---------------------------------------------------------- */
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+  }
+
+  // IE
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  // Edge
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+input, textarea {
+  @include placeholder(#aaa);
+}
+

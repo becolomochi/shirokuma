@@ -1,0 +1,41 @@
+/* ----------------------------------------------------------
+/* nav
+/* ナビゲーションのスタイル
+/* ---------------------------------------------------------- */
+
+.nav {
+  @media (max-width: $b-medium-max) {
+    flex-basis: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav_list {
+  margin-left: 0;
+  list-style: none;
+  @media (max-width: $b-medium-max) {
+    margin: 6px 0 12px;
+  }
+}
+
+.nav_item {
+  display: inline-block;
+}
+
+.nav_link {
+  padding: 20px 20px 17px;
+  line-height: 1;
+  color: $c-text;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.2s;
+  &:hover {
+    border-bottom-color: $bg-color3;
+  }
+  @media (max-width: $b-medium-max) {
+    border-bottom: 0;
+    padding: 0;
+    margin: 6px 10px;
+  }
+}

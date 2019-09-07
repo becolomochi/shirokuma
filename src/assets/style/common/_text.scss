@@ -1,0 +1,171 @@
+/* ----------------------------------------------------------
+/* text
+/* 文字周りのスタイル
+/* ---------------------------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
+  color: $text-color;
+  /* フォントレンダリング設定: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  @include resolution2x {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ----------------------------------------------------------
+/* Selection
+/* ---------------------------------------------------------- */
+::-moz-selection {
+  background-color: rgba($main-color, 0.8);
+  color: $text-color;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: rgba($main-color, 0.8);
+  color: $text-color;
+  text-shadow: none;
+}
+
+/* ----------------------------------------------------------
+/* headeline
+/* ---------------------------------------------------------- */
+h1 {
+  // font-size: 3.2rem;
+  /* or */
+  font-size: 4rem;
+  font-weight: normal;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+h6 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+h1,
+h2 {
+  line-height: 1.4;
+  margin: 0.5em 0;
+}
+
+h3,
+h4 {
+  margin: 0.5em 0;
+}
+
+h5,
+h6 {
+  margin: 1em 0;
+}
+
+/* ----------------------------------------------------------
+/* paragraph
+/* ---------------------------------------------------------- */
+p {
+  margin: 1em 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+/* ----------------------------------------------------------
+/* br
+/* ---------------------------------------------------------- */
+.br-pc-none {
+  @include mq-min {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------
+/* typography
+/* ---------------------------------------------------------- */
+.bold {
+  font-weight: bold;
+}
+
+/* ----------------------------------------------------------
+/* blockquote
+/* ---------------------------------------------------------- */
+blockquote {
+  margin: 1em 0;
+  border-left: 4px solid $line-color;
+  padding-left: 8px;
+}
+
+/* ----------------------------------------------------------
+/* list
+/* ---------------------------------------------------------- */
+ul,
+ol,
+dl {
+  margin: 1em 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+ul,
+ol {
+  margin-left: 0.5em;
+  list-style-position: inside;
+}
+
+/* ----------------------------------------------------------
+/* table
+/* ---------------------------------------------------------- */
+table {
+  margin: 1em 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid $line-color;
+  background: #fff;
+  padding: 4px;
+  word-break: break-all;
+}
+
+/* ----------------------------------------------------------
+/* link
+/* ---------------------------------------------------------- */
+a {
+  color: $main-color;
+  &:hover {
+    opacity: 0.8;
+  }
+}

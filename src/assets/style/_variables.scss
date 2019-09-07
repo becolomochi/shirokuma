@@ -1,10 +1,27 @@
-/** Variables */
+/* ----------------------------------------------------------
+/* variables
+/* 変数
+/* ---------------------------------------------------------- */
+
+$main-color: hsl(9, 55%, 50%);
+$main-sub-color: #fabcb1;
+$base-color: #ffeec9;
+$text-color: #444;
+
+$thin-gray: #f7f7f7;
+
+$line-color: lighten($text-color, 50%);
+
+$bg-color: $base-color;
 $bg-color1: #fff;
-$bg-color2: #ffeec9;
-$bg-color3: #fabcb1;
-$c-text: #444;
-//$c-link: hsl(200, 50%, 60%);
-$c-link: hsl(9, 55%, 50%);
+$bg-color2: $base-color;
+$bg-color3: $main-sub-color;
+$c-text: $text-color;
+$c-link: $main-color;
+
+
+$content-size: 1020px;
+$break-point: $content-size - 1px; 
 
 $b-small-max: 480px;
 $b-medium-min: $b-small-max + 1;
