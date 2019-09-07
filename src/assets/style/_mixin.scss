@@ -13,6 +13,37 @@
   }
 }
 
+@mixin mq-sm {
+  @media (max-width: $b-small-max) {
+    @content;
+  }
+}
+
+@mixin mq-md-min {
+  @media (min-width: $b-medium-min) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (max-width: $b-medium-max) {
+    @content;
+  }
+}
+
+@mixin mq-lg-min {
+  @media (min-width: $b-large-min) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (max-width: $b-large-max) {
+    @content;
+  }
+}
+
+
 /* ----------------------------------------------------------
 /* media query
 /* ---------------------------------------------------------- */

@@ -3,10 +3,10 @@
 /* 変数
 /* ---------------------------------------------------------- */
 
-$main-color: hsl(9, 55%, 50%);
-$main-sub-color: #fabcb1;
+$main-color: #94540d;
+$main-sub-color: #fccdc5;
 $base-color: #ffeec9;
-$text-color: #444;
+$text-color: #524747;
 
 $thin-gray: #f7f7f7;
 
@@ -16,11 +16,14 @@ $bg-color: $base-color;
 $bg-color1: #fff;
 $bg-color2: $base-color;
 $bg-color3: $main-sub-color;
-$c-text: $text-color;
-$c-link: $main-color;
+$link-color: $main-color;
 
 
-$content-size: 1020px;
+/* ----------------------------------------------------------
+/* break point
+/* ---------------------------------------------------------- */
+
+$content-size: 1000px;
 $break-point: $content-size - 1px; 
 
 $b-small-max: 480px;
@@ -28,5 +31,3 @@ $b-medium-min: $b-small-max + 1;
 $b-medium-max: 768px;
 $b-large-min: $b-medium-max + 1;
 $b-large-max: 1024px;
-$b-xlarge-min: $b-large-max + 1;
-$b-xlarge-max: 1200px;

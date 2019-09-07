@@ -6,31 +6,48 @@
 }
 
 .top-profile_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
   padding: 40px 60px;
-}
-@media (max-width: $b-small-max) {
-  .top-profile_box {
+  @include mq-sm {
     background-color: #fff;
     padding: 10px;
   }
 }
-.profile_thumb-box {
-  float: right;
-  margin-top: 40px;
-  margin-left: 40px;
+
+.profile_thumb {
+  display: flex;
 }
-.profile_more-link {
-  text-align: right;
+
+.profile_name {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: normal;
 }
-@media (max-width: $b-medium-max) {
-  .profile_thumb-box {
-    float: none;
-    margin-top: 10px;
-    margin-left: 0;
-    text-align: center;
+
+.profile_small {
+  margin-left: 10px;
+  font-size: 1.8rem;
+}
+
+.profile_role {
+  font-size: 1.4rem;
+}
+
+.profile_sns {
+  font-size: 1.4rem;
+  a {
+    margin-right: 8px;
+    text-decoration: none;
   }
-  .profile_title {
-    text-align: center;
+  i {
+    font-size: 120%;
+    margin-right: 3px;
   }
+}
+
+.profile_other {
+  margin-top: 8px;
 }

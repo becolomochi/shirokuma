@@ -13,7 +13,7 @@
   background: linear-gradient(135deg, #ffedad 0%, #f5a070 100%);
 }
 
-@media (max-width: $b-small-max) {
+@include mq-sm {
   .top-wrapper-header {
     height: 40vh;
   }
@@ -31,31 +31,28 @@ $width: 800px;
   }
 }
 
-.top_box {
-  &.about_box {
-    background-color: $bg-color2;
-  }
-  &.contact_box {
-    background-color: $bg-color3;
-  }
+.top_about {
+  background-color: $bg-color2;
+}
+.top_contact {
+  background-color: $bg-color3;
 }
 
-.top_box-title {
+.top_headline {
   font-size: 3.2rem;
   text-align: center;
-  margin-top: 32px;
   margin-bottom: 32px;
 }
 
-.top_pickup_box-outer {
+.top_pickup {
   max-width: 1200px;
   margin: 100px auto;
 }
 
-.top_pickup_box-inner {
+.top_pickup-inner {
   width: $b-large-min;
   margin: 0 auto;
-  @media (max-width: $b-medium-max) {
+  @include mq-md {
     width: 100%;
   }
 }

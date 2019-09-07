@@ -4,7 +4,7 @@
 /* ---------------------------------------------------------- */
 
 .nav {
-  @media (max-width: $b-medium-max) {
+  @include mq-md {
     flex-basis: 100%;
   }
   a {
@@ -15,7 +15,7 @@
 .nav_list {
   margin-left: 0;
   list-style: none;
-  @media (max-width: $b-medium-max) {
+  @include mq-md {
     margin: 6px 0 12px;
   }
 }
@@ -27,13 +27,13 @@
 .nav_link {
   padding: 20px 20px 17px;
   line-height: 1;
-  color: $c-text;
+  color: $text-color;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.2s;
   &:hover {
     border-bottom-color: $bg-color3;
   }
-  @media (max-width: $b-medium-max) {
+  @include mq-md {
     border-bottom: 0;
     padding: 0;
     margin: 6px 10px;

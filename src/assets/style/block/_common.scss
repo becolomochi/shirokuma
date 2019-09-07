@@ -1,4 +1,8 @@
-/** common */
+/* ----------------------------------------------------------
+/* common
+/* ページ全体に関わるスタイル
+/* ---------------------------------------------------------- */
+
 .common_tags {
   li {
     display: inline-block;
@@ -9,10 +13,19 @@
   }
 }
 
-.common_thumb-box {
+.common_link-box {
+  text-decoration: none;
+}
+
+.common_thumb {
   position: relative;
   overflow: hidden;
+  height: 180px;
+  @include mq-sm {
+    height: 150px;
+  }
 }
+
 .common_thumb-image {
   display: block;
   position: absolute;
@@ -30,60 +43,29 @@
 }
 
 /** Common more box */
-.common_more-box {
-  text-align: center;
+.common_more {
   margin-top: 60px;
   margin-bottom: 30px;
-  .more-link {
-    display: block;
-    max-width: 300px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0.5em;
-    border: 1px solid CurrentColor;
-    background-color: transparent;
-    transition: background-color 0.3s;
-    &:hover, &.hover {
-      text-decoration: none;
-      color: #fff;
-      background-color: $c-link;
-    }
+}
+
+.common_more-link {
+  display: block;
+  max-width: 300px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid $link-color;
+  background-color: transparent;
+  transition: background-color 0.3s;
+  &:hover {
+    color: #fff;
+    background-color: $link-color;
   }
 }
 
 /** common contents */
-.common_box-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 60px;
-  @media (max-width: $b-small-max) {
-    padding: 30px 20px;
-  }
-}
-
-.about_content-box,
-.contact_content-box {
-  position: relative;
-  margin-top: -13px;
-  width: 100%;
-  &:before {
-    position: absolute;
-    top: -20px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 30px;
-  }
-}
-
-.about_content-box {
-  padding-bottom: 50px;
-}
-
-.contact_content-box {
-  padding-bottom: 50px;
-}
-
 .common_article-title {
   margin-top: 0;
   font-size: 1.4rem;

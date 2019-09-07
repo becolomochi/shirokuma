@@ -7,16 +7,9 @@
         hnav
     transition(name="fade")
       router-view(:data="myData")
-    fnav
-    .sns-box
-      a(href="https://twitter.com/becolomochi" target="_blank").sns-link
-        i.fa.fa-twitter
-      a(href="https://github.com/becolomochi" target="_blank").sns-link
-        i.fa.fa-github
-      a(href="https://becolomochi.tumblr.com" target="_blank").sns-link
-        i.fa.fa-tumblr
-    footer
-      .copyright-box © 2017 beco
+    footer.footer
+      fnav
+      .footer_copyright © 2017-2019 beco
 </template>
 
 <script>

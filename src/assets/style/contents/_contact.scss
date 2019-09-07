@@ -4,26 +4,4 @@
   padding: 40px 60px;
   text-align: center;
 }
-.top-contact_link {
-  &:after {
-    content: '';
-    display: inline-block;
-    border-top: 1px solid $c-link;
-    border-right: 1px solid $c-link;
-    width: 6px;
-    height: 6px;
-    transform: rotate(45deg) translate(0px, -3px);
-  }
-}
-.sns-box {
-  margin-top: 20px;
-  text-align: center;
-}
-.sns-link {
-  margin: 0 5px;
-  font-size: 30px;
-  color: #666;
-  &:hover {
-    color: #444;
-  }
-}
+

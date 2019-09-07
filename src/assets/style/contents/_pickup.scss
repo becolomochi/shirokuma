@@ -7,31 +7,16 @@
 .pickup_box {
   flex-basis: 360px;
   margin: 32px 0;
-  @media (max-width: $b-medium-max) {
+  @include mq-md {
     flex-basis: 100%;
     margin: 0 32px 32px;
   }
 }
 
-.pickup_image-box {
-  height: 180px;
-  filter: sepia(30%);
-  transition: filter 0.3s;
-  &:hover, .hover {
-    filter: sepia(0);
-  }
-  @media (max-width: $b-small-max) {
-    height: 150px;
-  }
-}
-
-.pickup_title {
+.pickup_name {
   margin-top: 16px;
   margin-bottom: 0;
-  font-weight: normal;
   font-size: 1.6rem;
   text-align: center;
-  a {
-    color: $c-text;
-  }
+  color: $text-color;
 }
