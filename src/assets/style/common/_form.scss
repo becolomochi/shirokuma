@@ -19,6 +19,10 @@ label {
   margin-bottom: 0.25em;
 }
 
+input, textarea {
+  @include placeholder(#aaa);
+}
+
 input,
 textarea,
 select,
@@ -107,4 +111,19 @@ input[type="file"] {
 .form__checkbox
 .form__radio {
   cursor: pointer;
+}
+
+.label-required {
+  margin: 0 4px;
+  font-size: 1.1rem;
+  color: #fff;
+  background: $main-color;
+  padding: 2px 4px;
+  font-weight: normal;
+  border-radius: 2px;
+}
+
+.form_submit {
+  padding-left: 32px;
+  padding-right: 32px;
 }

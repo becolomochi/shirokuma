@@ -34,5 +34,10 @@ main {
 }
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

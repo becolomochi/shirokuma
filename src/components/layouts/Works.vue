@@ -1,8 +1,7 @@
 <template lang="pug">
-  .wrapper
-    main
-      transition(name="fade")
-        router-view(:data="myData")
+  .page.is-wide
+    transition(name="fade")
+      router-view(:data="myData")
 </template>
 
 <script>

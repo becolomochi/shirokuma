@@ -71,8 +71,3 @@
     color: $color;
   }
 }
-
-input, textarea {
-  @include placeholder(#aaa);
-}
-

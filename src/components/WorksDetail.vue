@@ -6,17 +6,18 @@
           router-link(to="/") Home
         li
           router-link(to="/works") Works
-    article.product_box
-      h1.page_headline(v-cloak).product_title {{ filteredData.title }}
+    article.article
+      h1.headline.page_headline(v-cloak) {{ filteredData.title }}
       div(v-for="p in filteredData.picture" v-if="p.id === '1'")
-        img(:src="p.path" width="" height="" alt="").product_image
-      p(v-cloak).product_description {{ filteredData.text }}
-      p(v-cloak).product_year 制作年：{{ filteredData.year }}
-      p(v-cloak) {{ filteredData.role }}
-      p(v-cloak)
-        a(:href="filteredData.url" target="_blank") {{ filteredData.urlTitle }}
+        img(:src="p.path" alt="")
+      .works_detail-detail
+        p(v-cloak) {{ filteredData.text }}
+        p(v-cloak) 制作年：{{ filteredData.year }}
+        p(v-cloak) {{ filteredData.role }}
+        p(v-cloak)
+          a(:href="filteredData.url" target="_blank") {{ filteredData.urlTitle }}
       div(v-for="p in filteredData.picture" v-if="p.id !== '1'")
-        img(:src="p.path" width="" height="" alt="").product_image
+        img(:src="p.path" alt="")
 </template>
 
 <script>
@@ -46,6 +47,7 @@
 
 <style lang="scss">
   .breadcrumb-nav {
+    font-size: 1.2rem;
     text-align: left;
     li {
       display: inline-block;

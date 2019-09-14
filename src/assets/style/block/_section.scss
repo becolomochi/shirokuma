@@ -1,21 +1,13 @@
-/** Box */
-/** wrapper */
-.wrapper {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-}
-@include mq-md {
-  .wrapper {
-    width: calc(100% - 20px);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
+/* ----------------------------------------------------------
+/* section
+/* セクションに関わるスタイル
+/* ---------------------------------------------------------- */
 
 .section {
-
+  margin-bottom: 80px;
+  @include mq-sm {
+    margin-bottom: 40px;
+  }
 }
 
 .section_inner {
@@ -27,4 +19,8 @@
   }
 }
 
-
+.section_headline {
+  font-size: 2.8rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #d0c8c8;
+}

@@ -18,23 +18,24 @@
 }
 
 .common_thumb {
+  display: block;
   position: relative;
   overflow: hidden;
   height: 180px;
   @include mq-sm {
     height: 150px;
   }
+  img {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%, -55%);
+    width: 120%;
+    height: auto;
+  }
 }
 
-.common_thumb-image {
-  display: block;
-  position: absolute;
-  top: 60%;
-  left: 60%;
-  transform: translate(-60%, -55%);
-  width: 120%;
-  height: auto;
-}
 
 .product_image {
   max-width: 100%;

@@ -1,7 +1,7 @@
 <template lang="pug">
-  .wrapper
+  .page.is-wide
     main
-      h1.page_headline ページが見つかりません
+      h1.headline.page_headline ページが見つかりません
 </template>
 
 <script>

@@ -1,0 +1,51 @@
+/* ----------------------------------------------------------
+/* About
+/* Aboutのスタイル
+/* ---------------------------------------------------------- */
+
+.about_list {
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 30px;
+  ul {
+    list-style-position: outside;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 20px;
+  }
+}
+
+.about_thumb {
+  display: flex;
+}
+
+.about_name {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: normal;
+}
+
+.about_small {
+  margin-left: 10px;
+  font-size: 1.8rem;
+}
+
+.about_role {
+  font-size: 1.4rem;
+}
+
+.about_sns {
+  font-size: 1.4rem;
+  a {
+    margin-right: 8px;
+    text-decoration: none;
+  }
+  i {
+    font-size: 120%;
+    margin-right: 3px;
+  }
+}
+
+.about_other {
+  margin-top: 8px;
+}

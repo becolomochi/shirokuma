@@ -1,6 +1,8 @@
-/** Top */
+/* ----------------------------------------------------------
+/* top
+/* トップページのスタイル
+/* ---------------------------------------------------------- */
 
-/** top wrapper header */
 @keyframes bgGradient {
   0% {background-position: 0%;}
   50% {background-position: 100%;}
@@ -38,21 +40,33 @@ $width: 800px;
   background-color: $bg-color3;
 }
 
-.top_headline {
-  font-size: 3.2rem;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.top_pickup {
+.top_works {
   max-width: 1200px;
   margin: 100px auto;
 }
 
-.top_pickup-inner {
+.top_works-inner {
   width: $b-large-min;
   margin: 0 auto;
   @include mq-md {
     width: 100%;
   }
+}
+
+.top_about-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px 60px;
+  @include mq-sm {
+    background-color: #fff;
+    padding: 10px;
+  }
+}
+
+.top_contact-inner {
+  background-color: #fff;
+  padding: 40px 60px;
+  text-align: center;
 }
