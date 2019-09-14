@@ -61,6 +61,10 @@
   margin-bottom: 0;
 }
 
+.works_thumb {
+  @include thumbnail(40%);
+}
+
 .works_detail-detail {
   margin: 32px 0;
 }

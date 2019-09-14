@@ -5,7 +5,7 @@
     ul.works_list
       li.works_item(v-for="d in data")
         router-link(:to="'/works/' + d.slug").common_link-box
-          div(v-for="p in d.picture" v-if="p.id === '1'").common_thumb
+          div(v-for="p in d.picture" v-if="p.id === '1'").works_thumb
             img(:src="p.path" alt="イメージ")
           h2(v-cloak).works_list-title {{ d.title }}
         .works_list-detail
