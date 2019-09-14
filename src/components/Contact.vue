@@ -2,11 +2,11 @@
   .page
     h1.headline.page_headline Contact 
       .sub お問い合わせ
-    form(action="https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec")
+    form
       input(name="SPREADSHEET_ID" type="hidden" value="1RTlomP3hXQZhHw3arZfng3dJeGJAnz3EcreOeYM1npA")
       input(name="SHEET_NAME" type="hidden" value="フォームデータ")
       .form
-        label.form__label Mail
+        label.form__label メールアドレス
         input(type="email" name="your-email" placeholder="your@email.com").wide
       .form
         label.form__label お名前
@@ -16,7 +16,7 @@
           span.label-required 必須
         textarea(name="your-message" placeholder="Message" rows="8" required)#message
       .form.text-center
-        button(type="submit" v-on:click="sendMessage()").form_submit Submit
+        button(type="button" v-on:click="sendMessage()")#submit.form_submit Submit
 </template>
 
 <script>
@@ -25,27 +25,32 @@
     description: 'べこ（becolomochi）へのお問い合わせページ',
     methods: {
       sendMessage() {
-        var form = $('form');
-        var submitBtn = form.find('button[type=submit]');
-        if(getElementById('message') === '') {
+        const form = $('form');
+        const message = $('#message');
+        const submitBtn = $('#submit');
+
+        if(!message.val()) {
           alert('メッセージを入力してください');
           return false;
         }
         $.ajax({
-          url: form.attr('action'),
+          url: 'https://script.google.com/macros/s/AKfycbwnF5oozNN5mgFhDtE252daSjJMPZULVLywV2bJmv82t3Y3U7PC/exec',
           dataType: 'jsonp',
           data: form.serialize(),
-          beforeSend: function() {
+          beforeSend: () => {
             return submitBtn.prop('disabled', true);
           },
-          complete: function() {
-            return submitBtn.prop('disabled', false);
+          complete: () => {
+            return submitBtn.prop('disabled', false),
+              message.val(''),
+              alert('送信完了しました');
           },
-          jsonpCallback: 'console.log',
-          error: function(response) {
-            return console.log(response);
+          error: (response) => {
+            alert('送信エラーです');
+            return;
           }
         });
+        event.preventDefault();
       }
     }
   }
