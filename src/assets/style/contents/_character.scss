@@ -1,0 +1,58 @@
+/* ----------------------------------------------------------
+/* character
+/* キャラクターのアニメーション
+/* ---------------------------------------------------------- */
+
+@keyframes fluffy {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-2px);}
+  100% {transform: translateY(0);}
+}
+
+.character {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  img {
+    animation: 2s ease-in-out fluffy infinite;
+  }
+}
+
+.character:nth-child(1) {
+  background-image: url(../img/img_top_catch1.png);
+  @include resolution2x {
+    background-image: url(../img/img_top_catch1@2x.png);
+  }
+  @include resolution2x {
+    background-image: url(../img/img_top_catch1@3x.png);
+  }
+  img {
+    animation-delay: 0.5s;
+  }
+}
+
+.character:nth-child(2) {
+  background-image: url(../img/img_top_catch2.png);
+  @include resolution2x {
+    background-image: url(../img/img_top_catch2@2x.png);
+  }
+  @include resolution2x {
+    background-image: url(../img/img_top_catch2@3x.png);
+  }
+  img {
+    animation-delay: 0.25s;
+  }
+}
+
+.character:nth-child(3) {
+  background-image: url(../img/img_top_catch3.png);
+  @include resolution2x {
+    background-image: url(../img/img_top_catch3@2x.png);
+  }
+  @include resolution2x {
+    background-image: url(../img/img_top_catch3@3x.png);
+  }
+  img {
+    animation-delay: 0;
+  }
+}

@@ -3,41 +3,20 @@
 /* トップページのスタイル
 /* ---------------------------------------------------------- */
 
-@keyframes bgGradient {
-  0% {background-position: 0%;}
-  50% {background-position: 100%;}
-  100% {background-position: 0%;}
-}
-
-.top-wrapper-header {
-  position: relative;
+.top_catch {
   height: 400px;
   background: linear-gradient(135deg, #ffedad 0%, #f5a070 100%);
-}
-
-@include mq-sm {
-  .top-wrapper-header {
+  @include mq-sm {
     height: 40vh;
   }
 }
-$width: 800px;
-.img-top-catch {
-  position: absolute;
-  bottom: 0;
-  left: calc(50% - #{$width} / 2);
-  max-width: $width;
-}
-@media (max-width: 800px) {
-  .img-top-catch {
-    left: 0;
-  }
-}
 
-.top_about {
-  background-color: $bg-color2;
-}
-.top_contact {
-  background-color: $bg-color3;
+.top_catch-inner {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
 }
 
 .top_works {
@@ -53,6 +32,10 @@ $width: 800px;
   }
 }
 
+.top_about {
+  background-color: $bg-color2;
+}
+
 .top_about-inner {
   display: flex;
   justify-content: space-between;
@@ -64,6 +47,10 @@ $width: 800px;
     padding: 16px;
     flex-wrap: wrap-reverse;
   }
+}
+
+.top_contact {
+  background-color: $bg-color3;
 }
 
 .top_contact-inner {

@@ -11,4 +11,7 @@
   .sub {
     font-size: 50%;
   }
+  @include mq-md {
+    font-size: 3.2rem;
+  }
 }

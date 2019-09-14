@@ -1,7 +1,13 @@
 <template lang="pug">
   .top
-    .top-wrapper-header
-      img(src="../assets/img/img_top_catch.svg" alt="あたたかくて やさしい、しなやかなコミュニケーションを").img-top-catch
+    .top_catch
+      .top_catch-inner
+        div.character
+          img(src="../assets/img/txt_top_catch1.png" src-set="../assets/img/txt_top_catch1.png, ../assets/img/txt_top_catch1@2x.png 2x, ../assets/img/txt_top_catch1@3x.png 3x" alt="あたたかくて")
+        div.character
+          img(src="../assets/img/txt_top_catch2.png" src-set="../assets/img/txt_top_catch2.png, ../assets/img/txt_top_catch2@2x.png 2x, ../assets/img/txt_top_catch2@3x.png 3x" alt="やさしい")
+        div.character
+          img(src="../assets/img/txt_top_catch3.png" src-set="../assets/img/txt_top_catch3.png, ../assets/img/txt_top_catch3@2x.png 2x, ../assets/img/txt_top_catch3@3x.png 3x" alt="しなやかなコミュニケーションを")
     section.top_works
       .top_works-inner
         h2.headline Works
