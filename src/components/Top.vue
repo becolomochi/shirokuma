@@ -41,8 +41,8 @@
             div.about_other
               router-link(to="/about") そのほか
           .about_thumb
-            img(src="../assets/img/icon1.png" width="120" height="120" alt="icon1")
-            img(src="../assets/img/icon2.jpg" width="120" height="120" alt="icon1")
+            img(src="../assets/img/icon1.png" alt="icon1")
+            img(src="../assets/img/icon2.jpg" alt="icon2")
 
     section.top_contact
       .section_inner
